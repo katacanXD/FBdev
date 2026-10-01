@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контактная информация и обратная связь">
+    <title>ShopProject — Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+                <li><a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+    </ol>
+</nav>
+
+<main class="section">
+    <h1 class="section__title">Контакты и обратная связь</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+        <section>
+            <h2>Контактная информация</h2>
+            <p><strong>Адрес офиса:</strong> г. Москва, ул. Программистов, д. 42</p>
+            <p><strong>Телефон:</strong> <a href="tel:+78000000000">+7 (800) 000-00-00</a></p>
+            <p><strong>Электронная почта:</strong> <a href="mailto:support@shopproject.ru">support@shopproject.ru</a></p>
+            <p><strong>Режим работы:</strong> Пн–Пт: с 9:00 до 20:00 (МСК)</p>
+
+            <div class="aside-info">
+                <h3>Самовывоз</h3>
+                <p>Заказы, оформленные через сайт, можно забрать в пункте выдачи ежедневно с 10:00 до 19:00.</p>
+            </div>
+        </section>
+
+        <section class="order-form-container" style="margin: 0;">
+            <h2 style="margin-top: 0;">Напишите нам</h2>
+            <form id="contact-form" action="#" method="post" novalidate>
+                <div class="form-field">
+                    <label for="contact-name">Имя</label>
+                    <input id="contact-name" name="name" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="contact-email">Email</label>
+                    <input id="contact-email" name="email" type="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="contact-msg">Сообщение</label>
+                    <textarea id="contact-msg" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-field">
+                    <label>
+                        <input type="checkbox" required> Согласен на обработку данных
+                    </label>
+                </div>
+                <button class="button" type="submit">Отправить вопрос</button>
+            </form>
+            <p class="success-message" id="contact-success" hidden>Сообщение успешно отправлено!</p>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <p>&copy; 2026 ShopProject. Контакты.</p>
+        <p><a href="#top">Наверх страницы ↑</a></p>
+    </div>
+</footer>
+
+<a class="scroll-top" href="#top" aria-label="Вернуться наверх страницы">↑</a>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробные характеристики и описание игровой мыши Pro-100">
+    <title>ShopProject — Игровая мышь Pro-100</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+                <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Игровая мышь Pro-100</li>
+    </ol>
+</nav>
+
+<main class="section">
+    <article class="product-detail">
+        <div class="product-detail__gallery">
+            <span>Фотография мыши Pro-100</span>
+        </div>
+
+        <div class="product-detail__info">
+            <h1>Игровая мышь Pro-100</h1>
+            <p class="product-detail__price">2 490 ₽</p>
+            <p>Флагманская модель мыши с эргономичным хватом под правую руку, тефлоновыми ножками скольжения и кабелем в паракордовой оплётке.</p>
+
+            <div style="margin: 24px 0;">
+                <button class="button product-card__button" type="button" data-product="Игровая мышь Pro-100">Купить в 1 клик</button>
+                <a class="button button--secondary" href="order.html">Оформить доставку</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Обязательная таблица характеристик -->
+    <section>
+        <table class="specs-table">
+            <caption>Технические характеристики устройства</caption>
+            <thead>
+            <tr>
+                <th scope="col">Параметр</th>
+                <th scope="col">Значение</th>
+                <th scope="col">Примечание</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Тип сенсора</th>
+                <td>Оптический PixArt 3389</td>
+                <td>Максимальная точность без срывов</td>
+            </tr>
+            <tr>
+                <th scope="row">Разрешение DPI</th>
+                <td>100 – 16 000 DPI</td>
+                <td>Переключение кнопкой на лету</td>
+            </tr>
+            <tr>
+                <th scope="row">Частота опроса</th>
+                <td>1000 Гц (1 мс)</td>
+                <td>Мгновенный отклик</td>
+            </tr>
+            <tr>
+                <th scope="row">Количество кнопок</th>
+                <td>6 программируемых</td>
+                <td>Поддержка макросов</td>
+            </tr>
+            <tr>
+                <th scope="row">Вес</th>
+                <td>68 грамм</td>
+                <td>Ультралегкая конструкция</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <p>&copy; 2026 ShopProject. Карточка товара.</p>
+        <p><a href="#top">Наверх страницы ↑</a></p>
+    </div>
+</footer>
+
+<dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 id="order-dialog-title">Быстрый заказ</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden">
+        <div class="form-field">
+            <label for="modal-name">Имя</label>
+            <input id="modal-name" name="name" type="text" required>
+        </div>
+        <div class="form-field">
+            <label for="modal-phone">Телефон</label>
+            <input id="modal-phone" name="phone" type="tel" required>
+        </div>
+        <div class="form-actions">
+            <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+            <button class="button" type="submit">Отправить</button>
+        </div>
+    </form>
+</dialog>
+
+<a class="scroll-top" href="#top" aria-label="Вернуться наверх страницы">↑</a>
+
+</body>
+</html>

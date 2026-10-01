@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Оформление заказа на покупку компьютерной техники">
+    <title>ShopProject — Оформление заявки</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                <li><a class="site-nav__link site-nav__link--active" href="order.html">Заявка</a></li>
+                <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Оформление заявки</li>
+    </ol>
+</nav>
+
+<main class="section">
+    <div class="order-form-container">
+        <h1 style="margin-top: 0; margin-bottom: 20px;">Оформление заявки</h1>
+
+        <form id="page-order-form" action="#" method="post" novalidate>
+            <div class="form-field">
+                <label for="order-fullname">ФИО покупателя</label>
+                <input id="order-fullname" name="fullname" type="text" placeholder="Иванов Иван Иванович" required>
+            </div>
+
+            <div class="form-field">
+                <label for="order-email">Адрес электронной почты</label>
+                <input id="order-email" name="email" type="email" placeholder="ivanov@mail.ru" required>
+            </div>
+
+            <div class="form-field">
+                <label for="order-tel">Номер телефона</label>
+                <input id="order-tel" name="phone" type="tel" placeholder="+7 (999) 000-00-00" required>
+                <small>Формат: +7 (900) 000-00-00</small>
+            </div>
+
+            <div class="form-field">
+                <label for="order-item">Выбор товара или услуги</label>
+                <select id="order-item" name="item" required>
+                    <option value="">-- Выберите товар --</option>
+                    <option value="mouse">Игровая мышь Pro-100</option>
+                    <option value="keyboard">Клавиатура Clicky Mech</option>
+                    <option value="headset">Гарнитура Surround 7.1</option>
+                    <option value="pad">Игровой коврик Speed XL</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="order-address">Адрес доставки</label>
+                <textarea id="order-address" name="address" rows="3" placeholder="Город, улица, дом, квартира"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    Я подтверждаю согласие на обработку персональных данных
+                </label>
+            </div>
+
+            <button class="button" type="submit" style="width: 100%;">Подтвердить заказ</button>
+        </form>
+
+        <p class="success-message" id="page-success-message" hidden>
+            Ваш заказ успешно оформлен! Менеджер свяжется с вами в ближайшее время.
+        </p>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <p>&copy; 2026 ShopProject. Форма заявки.</p>
+        <p><a href="#top">Наверх страницы ↑</a></p>
+    </div>
+</footer>
+
+<a class="scroll-top" href="#top" aria-label="Вернуться наверх страницы">↑</a>>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог компьютерной периферии и техники">
+    <title>ShopProject — Каталог товаров</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li><a class="site-nav__link" href="index.html">Главная</a></li>
+                <li><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+                <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+                <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Каталог</li>
+    </ol>
+</nav>
+
+<main class="section">
+    <h1 class="section__title">Каталог оборудования</h1>
+
+    <div class="catalog-layout">
+        <!-- Sticky-боковая панель фильтрации -->
+        <aside class="catalog-filters">
+            <h2 class="catalog-filters__title">Фильтры</h2>
+            <form action="#" method="get">
+                <div class="catalog-filters__group">
+                    <span class="catalog-filters__label">Категория</span>
+                    <div><label><input type="checkbox" checked> Мыши</label></div>
+                    <div><label><input type="checkbox" checked> Клавиатуры</label></div>
+                    <div><label><input type="checkbox"> Наушники</label></div>
+                </div>
+
+                <div class="catalog-filters__group">
+                    <label class="catalog-filters__label" for="filter-price">Макс. цена (руб.)</label>
+                    <input id="filter-price" type="number" placeholder="10000" style="width: 100%; padding: 6px;">
+                </div>
+
+                <button class="button" type="submit" style="width: 100%;">Применить</button>
+            </form>
+        </aside>
+
+        <!-- CSS Grid Сетка товаров -->
+        <section class="products-grid">
+            <article class="product-card">
+                <span class="product-card__badge product-card__badge--hit">Хит</span>
+                <div class="product-card__image-placeholder">Мышь Pro-100</div>
+                <h3 class="product-card__title"><a href="product.html">Игровая мышь Pro-100</a></h3>
+                <p class="product-card__description">Топовый оптический сенсор и переключатели Omron на 50 млн нажатий.</p>
+                <div class="product-card__footer">
+                    <p class="product-card__price">2 490 ₽</p>
+                    <button class="button product-card__button" type="button" data-product="Игровая мышь Pro-100">Заказать</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
+                <div class="product-card__image-placeholder">Клавиатура Mech</div>
+                <h3 class="product-card__title"><a href="product.html">Клавиатура Clicky Mech</a></h3>
+                <p class="product-card__description">Строгий алюминиевый корпус и настраиваемая покавишная подсветка.</p>
+                <div class="product-card__footer">
+                    <p class="product-card__price">5 990 ₽</p>
+                    <button class="button product-card__button" type="button" data-product="Клавиатура Clicky Mech">Заказать</button>
+                </div>
+            </article>
+
+            <article class="product-card product-card--discount">
+                <span class="product-card__badge product-card__badge--sale">-20%</span>
+                <div class="product-card__image-placeholder">Наушники 7.1</div>
+                <h3 class="product-card__title"><a href="product.html">Гарнитура Surround 7.1</a></h3>
+                <p class="product-card__description">Глубокий бас и кристальная чистота позиционирования в играх.</p>
+                <div class="product-card__footer">
+                    <p class="product-card__price">3 990 ₽</p>
+                    <button class="button product-card__button" type="button" data-product="Гарнитура Surround 7.1">Заказать</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-card__image-placeholder">Коврик Speed XL</div>
+                <h3 class="product-card__title"><a href="product.html">Игровой коврик Speed XL</a></h3>
+                <p class="product-card__description">Влагоотталкивающее покрытие и прошитые края против истирания.</p>
+                <div class="product-card__footer">
+                    <p class="product-card__price">1 290 ₽</p>
+                    <button class="button product-card__button" type="button" data-product="Коврик Speed XL">Заказать</button>
+                </div>
+            </article>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <p>&copy; 2026 ShopProject. Каталог продукции.</p>
+        <p><a href="#top">Наверх страницы ↑</a></p>
+    </div>
+</footer>
+
+<dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden">
+        <div class="form-field">
+            <label for="modal-name">Имя</label>
+            <input id="modal-name" name="name" type="text" required>
+        </div>
+        <div class="form-field">
+            <label for="modal-phone">Телефон</label>
+            <input id="modal-phone" name="phone" type="tel" required>
+        </div>
+        <div class="form-actions">
+            <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+            <button class="button" type="submit">Отправить</button>
+        </div>
+    </form>
+</dialog>
+
+<a class="scroll-top" href="#top" aria-label="Вернуться наверх страницы">↑</a>
+
+</body>
+</html>
