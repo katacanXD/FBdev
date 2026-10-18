@@ -296,12 +296,8 @@ a:focus-visible {
     color: var(--color-primary);
 }
 
-.breadcrumbs__current::before {
-    content: " / ";
-    color: var(--color-muted);
-}
-
-.breadcrumbs__link + .breadcrumbs__link::before {
+.breadcrumbs__current::before,
+.breadcrumbs__link:not(:first-child)::before {
     content: " / ";
     color: var(--color-muted);
 }
@@ -335,16 +331,8 @@ a:focus-visible {
     background-color: var(--color-surface);
 }
 
-.catalog-filters__title {
-    margin-top: 0;
-}
-
 .catalog-products {
     grid-area: products;
-}
-
-.catalog-products__title {
-    margin-top: 0;
 }
 
 /* ===============================
