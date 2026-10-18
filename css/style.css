@@ -201,6 +201,7 @@ a:focus-visible {
    8. БЭМ-блок «Карточка товара»
    =============================== */
 .product-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
@@ -225,6 +226,30 @@ a:focus-visible {
 .product-card__title {
     margin: 0;
     color: var(--color-text);
+}
+
+.product-card__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-card__badge {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    padding: 4px 8px;
+    color: var(--color-white);
+    background-color: var(--color-danger);
+    border-radius: var(--radius-sm);
+}
+
+.product-card__image {
+    padding: var(--space-xl);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-muted);
+    background-color: var(--color-surface);
+    text-align: center;
 }
 
 .product-card__description {
@@ -276,6 +301,11 @@ a:focus-visible {
     color: var(--color-muted);
 }
 
+.breadcrumbs__link + .breadcrumbs__link::before {
+    content: " / ";
+    color: var(--color-muted);
+}
+
 :target {
     outline: 2px dashed var(--color-primary);
     outline-offset: 4px;
@@ -294,7 +324,11 @@ a:focus-visible {
 }
 
 .catalog-filters {
+    position: sticky;
+    top: var(--space-md);
+    z-index: 1;
     grid-area: filters;
+    align-self: start;
     padding: var(--space-md);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
@@ -438,5 +472,31 @@ a:focus-visible {
    =============================== */
 .site-footer {
     padding: var(--space-lg);
+    background-color: var(--color-surface);
+}
+
+/* ===============================
+   17. БЭМ-блок «Таблица характеристик»
+   =============================== */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-bg);
+}
+
+.product-table caption {
+    padding-bottom: var(--space-sm);
+    font-weight: 700;
+    text-align: left;
+}
+
+.product-table th,
+.product-table td {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+.product-table thead th {
     background-color: var(--color-surface);
 }
