@@ -39,6 +39,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -168,7 +172,31 @@ a:focus-visible {
 }
 
 /* ===============================
-   5. Форма и модальное окно
+   5. Хлебные крошки и якоря
+   =============================== */
+.breadcrumbs {
+    max-width: var(--container-width);
+    margin: 0 auto var(--space-md);
+    font-size: 14px;
+    color: var(--color-muted);
+}
+
+.breadcrumbs a {
+    color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+    content: " / ";
+    color: var(--color-muted);
+}
+
+:target {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 4px;
+}
+
+/* ===============================
+   6. Форма и модальное окно
    =============================== */
 .order-dialog {
     width: min(100% - 32px, 560px);
