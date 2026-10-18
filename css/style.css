@@ -228,11 +228,6 @@ a:focus-visible {
     color: var(--color-text);
 }
 
-.product-card__link {
-    color: inherit;
-    text-decoration: none;
-}
-
 .product-card__badge {
     position: absolute;
     top: var(--space-sm);
@@ -487,4 +482,34 @@ a:focus-visible {
 
 .product-table thead th {
     background-color: var(--color-surface);
+}
+
+/* ===============================
+   18. БЭМ-блок «Кнопка наверх»
+   =============================== */
+.scroll-top {
+    position: fixed;
+    right: var(--space-lg);
+    bottom: var(--space-lg);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.scroll-top:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary-dark);
+}
+
+.scroll-top:focus-visible {
+    outline: 2px solid var(--color-primary-dark);
+    outline-offset: 3px;
 }
