@@ -3,130 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Заявка — Bootstrap Shop</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+  <title>Оформление заказа — 33 ОБОРОТА</title>
+  <meta name="description" content="Оформление заказа в виниловой лавке «33 ОБОРОТА»: доставка курьером, в пункт выдачи или самовывоз с Покровки.">
+  <meta name="theme-color" content="#13322a">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Товар</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="order.html">Заявка</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Дополнительно
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
-              <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body class="page-order">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-  <main class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <div class="card shadow-sm">
-          <div class="card-header bg-primary text-white">
-            <h1 class="h4 mb-0">Форма заявки</h1>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><i class="topbar__dot" aria-hidden="true"></i>Москва, Покровка, 12 · ежедневно 11:00–21:00</span>
+      <span>Бесплатная доставка от 5 000 ₽</span>
+      <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <nav class="navbar navbar-expand-lg site-nav" aria-label="Основная навигация">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>
+            33 ОБОРОТА
+            <span class="brand__sub">виниловая лавка</span>
+          </span>
+        </a>
+
+        <div class="head-actions">
+          <button type="button" class="btn-icon" data-search-open aria-label="Открыть поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </button>
+          <a class="btn-icon wish-link" href="catalog.html?view=wishlist" data-wish-link aria-label="Избранное">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4 15.6 4 10.3A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 8 2.5c0 5.3-8 10-8 10Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            <span class="wish-link__count" data-wish-count hidden>0</span>
+          </a>
+          <button type="button" class="cart-btn" data-cart-open>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 4h2.2l2.2 10.2a2 2 0 0 0 2 1.6h7.3a2 2 0 0 0 2-1.6L20.5 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19.2" r="1.4" fill="currentColor"/><circle cx="17.5" cy="19.2" r="1.4" fill="currentColor"/></svg>
+            Корзина
+            <span class="cart-btn__count" data-cart-count hidden>0</span>
+          </button>
+        </div>
+
+        <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="nav-toggle__lines" aria-hidden="true"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Жанры</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="catalog.html?genre=rock">Рок</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=jazz">Джаз</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=electronic">Электроника</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=hiphop">Хип-хоп</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=soul">Соул и фанк</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=pop">Поп</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">О лавке</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Заказ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav aria-label="Хлебные крошки">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="cart.html">Корзина</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Оформление</li>
+          </ol>
+        </nav>
+        <div class="page-head__row">
+          <div>
+            <h1 class="page-title">Оформление заказа</h1>
+            <p class="page-head__meta mb-0 mt-2">Заполните контакты — перезвоним и подтвердим состав заказа.</p>
           </div>
-          <div class="card-body">
-            <div class="alert alert-info" role="alert">
-              Заполните форму. Поля со звёздочкой являются обязательными.
-            </div>
-            <form>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container">
+        <div class="row g-4 g-lg-5" id="orderLayout">
+          <div class="col-12 col-lg-7">
+            <form id="orderForm" class="needs-validation" novalidate>
               <div class="row g-3">
                 <div class="col-12 col-md-6">
-                  <label for="order-name" class="form-label">Имя *</label>
-                  <input id="order-name" name="name" type="text" class="form-control" required>
+                  <label class="form-label" for="orderName">Имя <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" id="orderName" name="name" type="text" autocomplete="name" required minlength="2">
+                  <div class="invalid-feedback">Напишите, как к вам обращаться.</div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <label for="order-email" class="form-label">E-mail *</label>
-                  <input id="order-email" name="email" type="email" class="form-control" required>
+                  <label class="form-label" for="orderPhone">Телефон <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" id="orderPhone" name="phone" type="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required pattern="[0-9+()\-\s]{10,20}">
+                  <div class="invalid-feedback">Нужен телефон для связи — минимум 10 цифр.</div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <label for="order-phone" class="form-label">Телефон</label>
-                  <div class="input-group">
-                    <span class="input-group-text">+7</span>
-                    <input id="order-phone" name="phone" type="tel" class="form-control" placeholder="900 000-00-00">
-                  </div>
+                  <label class="form-label" for="orderEmail">E-mail</label>
+                  <input class="form-control" id="orderEmail" name="email" type="email" autocomplete="email" placeholder="для чека и трек-номера">
+                  <div class="invalid-feedback">Проверьте адрес — на него придёт чек.</div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <label for="order-product" class="form-label">Товар</label>
-                  <select id="order-product" name="product" class="form-select">
-                    <option selected>Выберите товар</option>
-                    <option value="product-1">Товар 1</option>
-                    <option value="product-2">Товар 2</option>
-                    <option value="product-3">Товар 3</option>
-                  </select>
+                  <label class="form-label" for="orderCity">Город <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" id="orderCity" name="city" type="text" autocomplete="address-level2" value="Москва" required>
+                  <div class="invalid-feedback">Укажите город доставки.</div>
                 </div>
+
                 <div class="col-12">
-                  <label for="order-comment" class="form-label">Комментарий</label>
-                  <textarea id="order-comment" name="comment" class="form-control" rows="4"></textarea>
+                  <fieldset class="filter-group">
+                    <legend class="filter-group__legend">Как получить</legend>
+                    <div class="d-grid gap-2">
+                      <label class="delivery-option">
+                        <input class="form-check-input mt-1" type="radio" name="delivery" value="courier" checked>
+                        <span>
+                          <span class="delivery-option__title">Курьер по Москве</span>
+                          <span class="delivery-option__desc">На следующий день, 390 ₽ · бесплатно от 5 000 ₽</span>
+                        </span>
+                        <span class="delivery-option__price" data-delivery-price="courier">390 ₽</span>
+                      </label>
+                      <label class="delivery-option">
+                        <input class="form-check-input mt-1" type="radio" name="delivery" value="pickup">
+                        <span>
+                          <span class="delivery-option__title">Пункт выдачи</span>
+                          <span class="delivery-option__desc">2–5 дней по России, 290 ₽</span>
+                        </span>
+                        <span class="delivery-option__price">290 ₽</span>
+                      </label>
+                      <label class="delivery-option">
+                        <input class="form-check-input mt-1" type="radio" name="delivery" value="shop">
+                        <span>
+                          <span class="delivery-option__title">Самовывоз с Покровки</span>
+                          <span class="delivery-option__desc">Москва, ул. Покровка, 12 · обычно через час</span>
+                        </span>
+                        <span class="delivery-option__price">Бесплатно</span>
+                      </label>
+                    </div>
+                  </fieldset>
                 </div>
+
+                <div class="col-12" id="addressField">
+                  <label class="form-label" for="orderAddress">Адрес доставки <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" id="orderAddress" name="address" type="text" autocomplete="street-address" placeholder="Улица, дом, квартира" required>
+                  <div class="invalid-feedback">Без адреса курьер не доедет.</div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="orderComment">Комментарий</label>
+                  <textarea class="form-control" id="orderComment" name="comment" rows="3" placeholder="Например: позвонить за час, упаковать в подарок"></textarea>
+                </div>
+
                 <div class="col-12">
                   <div class="form-check">
-                    <input id="order-agree" name="agree" class="form-check-input" type="checkbox" required>
-                    <label class="form-check-label" for="order-agree">
-                      Я согласен на обработку данных *
+                    <input class="form-check-input" id="orderAgree" name="agree" type="checkbox" required>
+                    <label class="form-check-label" for="orderAgree">
+                      Согласен на обработку персональных данных <span class="req" aria-hidden="true">*</span>
                     </label>
+                    <div class="invalid-feedback">Без согласия мы не сможем оформить заказ.</div>
                   </div>
                 </div>
-                <div class="col-12 d-flex gap-2">
-                  <button class="btn btn-primary" type="submit">
-                    Отправить заявку
-                  </button>
-                  <button class="btn btn-outline-secondary" type="reset">
-                    Очистить
-                  </button>
+
+                <div class="col-12">
+                  <p class="form-text mb-0">Нажимая «Оформить заказ», вы подтверждаете, что состав заказа проверен. Это учебный проект — оплата не списывается.</p>
+                </div>
+
+                <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+                  <button class="btn-ink btn-lg" type="submit">Оформить заказ</button>
+                  <a class="btn-line" href="cart.html">Вернуться в корзину</a>
                 </div>
               </div>
             </form>
           </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="order-aside">
+              <p class="order-aside__head mb-0">Ваш заказ</p>
+              <div class="order-aside__body" id="orderSummary"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="empty-state" id="orderEmpty" hidden>
+          <div class="empty-state__disc" aria-hidden="true"></div>
+          <h3>В корзине пока пусто</h3>
+          <p>Оформлять нечего: выберите пластинки в каталоге — и возвращайтесь.</p>
+          <a class="btn-ink" href="catalog.html">Перейти в каталог</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container">
+      <div class="site-foot__top">
+        <div>
+          <a class="brand" href="index.html" style="color:var(--paper)">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span>33 ОБОРОТА</span>
+          </a>
+          <p class="site-foot__about">
+            Виниловая лавка на Покровке. Продаём, меняем и слушаем пластинки с 2019 года.
+          </p>
+          <p class="site-foot__about" style="margin-top:0.6rem">
+            Москва, ул. Покровка, 12<br>
+            <a href="tel:+74951234567" style="text-decoration:underline">+7 (495) 123-45-67</a>
+          </p>
+        </div>
+        <div>
+          <h2>Каталог</h2>
+          <ul class="site-foot__links">
+            <li><a href="catalog.html">Все пластинки</a></li>
+            <li><a href="catalog.html?badge=new">Новый завоз</a></li>
+            <li><a href="catalog.html?condition=used">Б/у, проверенные</a></li>
+            <li><a href="catalog.html?genre=jazz">Джаз</a></li>
+            <li><a href="catalog.html?genre=electronic">Электроника</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Покупателю</h2>
+          <ul class="site-foot__links">
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="order.html">Оформление заказа</a></li>
+            <li><a href="index.html#faq">Доставка и возврат</a></li>
+            <li><a href="index.html#process">Как проверяем</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Лавка</h2>
+          <ul class="site-foot__links">
+            <li><a href="index.html#about">О нас</a></li>
+            <li><a href="index.html#reviews">Отзывы</a></li>
+            <li><a href="index.html#subscribe">Подписка</a></li>
+            <li><a href="tel:+74951234567">Позвонить</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-foot__bottom">
+        <span>© <span data-year>2026</span> 33 ОБОРОТА</span>
+        <span>Учебный проект · цены и наличие демонстрационные</span>
+      </div>
+      <p class="site-foot__wordmark" aria-hidden="true">33 ОБОРОТА</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="successTitle">Заказ принят</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2">Номер заказа: <b class="num" id="successNumber">—</b></p>
+          <p class="text-muted mb-3">Мы позвоним в течение рабочего дня, подтвердим состав и время доставки. Письмо с чеком придёт на указанный e-mail.</p>
+          <div class="alert alert-success mb-0" role="status" style="border:1px solid var(--ink);background:var(--paper-2);color:var(--ink)">
+            Спасибо, что выбираете пластинки у нас.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="btn-line" href="catalog.html">Вернуться в каталог</a>
+          <button type="button" class="btn-ink" data-bs-dismiss="modal">Хорошо</button>
         </div>
       </div>
     </div>
-  </main>
+  </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <noscript>
+    <div class="container" style="padding:1rem 0">
+      <div class="alert alert-warning" role="alert">
+        Оформление заказа работает на JavaScript. Включите его, чтобы отправить заявку.
+      </div>
+    </div>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/order.js"></script>
 </body>
 </html>

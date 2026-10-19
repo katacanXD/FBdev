@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина — 33 ОБОРОТА</title>
+  <meta name="description" content="Корзина виниловой лавки «33 ОБОРОТА»: проверьте состав заказа, количество и итоговую сумму.">
+  <meta name="theme-color" content="#13322a">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="page-cart">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><i class="topbar__dot" aria-hidden="true"></i>Москва, Покровка, 12 · ежедневно 11:00–21:00</span>
+      <span>Бесплатная доставка от 5 000 ₽</span>
+      <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <nav class="navbar navbar-expand-lg site-nav" aria-label="Основная навигация">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>
+            33 ОБОРОТА
+            <span class="brand__sub">виниловая лавка</span>
+          </span>
+        </a>
+
+        <div class="head-actions">
+          <button type="button" class="btn-icon" data-search-open aria-label="Открыть поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </button>
+          <a class="btn-icon wish-link" href="catalog.html?view=wishlist" data-wish-link aria-label="Избранное">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4 15.6 4 10.3A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 8 2.5c0 5.3-8 10-8 10Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            <span class="wish-link__count" data-wish-count hidden>0</span>
+          </a>
+          <button type="button" class="cart-btn" data-cart-open>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 4h2.2l2.2 10.2a2 2 0 0 0 2 1.6h7.3a2 2 0 0 0 2-1.6L20.5 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19.2" r="1.4" fill="currentColor"/><circle cx="17.5" cy="19.2" r="1.4" fill="currentColor"/></svg>
+            Корзина
+            <span class="cart-btn__count" data-cart-count hidden>0</span>
+          </button>
+        </div>
+
+        <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="nav-toggle__lines" aria-hidden="true"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Жанры</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="catalog.html?genre=rock">Рок</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=jazz">Джаз</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=electronic">Электроника</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=hiphop">Хип-хоп</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=soul">Соул и фанк</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=pop">Поп</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">О лавке</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav aria-label="Хлебные крошки">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+          </ol>
+        </nav>
+        <div class="page-head__row">
+          <div>
+            <h1 class="page-title">Корзина</h1>
+            <p class="page-head__meta mb-0 mt-2">Проверьте состав — количество можно поменять прямо здесь.</p>
+          </div>
+          <p class="page-head__meta mb-0" id="cartCountLine"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="container">
+        <div class="row g-4 g-lg-5" id="cartLayout">
+          <div class="col-12 col-lg-8">
+            <div id="cartContent"></div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div id="cartSummary"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container">
+      <div class="site-foot__top">
+        <div>
+          <a class="brand" href="index.html" style="color:var(--paper)">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span>33 ОБОРОТА</span>
+          </a>
+          <p class="site-foot__about">
+            Виниловая лавка на Покровке. Продаём, меняем и слушаем пластинки с 2019 года.
+          </p>
+          <p class="site-foot__about" style="margin-top:0.6rem">
+            Москва, ул. Покровка, 12<br>
+            <a href="tel:+74951234567" style="text-decoration:underline">+7 (495) 123-45-67</a>
+          </p>
+        </div>
+        <div>
+          <h2>Каталог</h2>
+          <ul class="site-foot__links">
+            <li><a href="catalog.html">Все пластинки</a></li>
+            <li><a href="catalog.html?badge=new">Новый завоз</a></li>
+            <li><a href="catalog.html?condition=used">Б/у, проверенные</a></li>
+            <li><a href="catalog.html?genre=jazz">Джаз</a></li>
+            <li><a href="catalog.html?genre=electronic">Электроника</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Покупателю</h2>
+          <ul class="site-foot__links">
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="order.html">Оформление заказа</a></li>
+            <li><a href="index.html#faq">Доставка и возврат</a></li>
+            <li><a href="index.html#process">Как проверяем</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Лавка</h2>
+          <ul class="site-foot__links">
+            <li><a href="index.html#about">О нас</a></li>
+            <li><a href="index.html#reviews">Отзывы</a></li>
+            <li><a href="index.html#subscribe">Подписка</a></li>
+            <li><a href="tel:+74951234567">Позвонить</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-foot__bottom">
+        <span>© <span data-year>2026</span> 33 ОБОРОТА</span>
+        <span>Учебный проект · цены и наличие демонстрационные</span>
+      </div>
+      <p class="site-foot__wordmark" aria-hidden="true">33 ОБОРОТА</p>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="container" style="padding:1rem 0">
+      <div class="alert alert-warning" role="alert">
+        Корзина работает на JavaScript. Включите его, чтобы проверить заказ.
+      </div>
+    </div>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

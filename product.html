@@ -3,176 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Товар — Bootstrap Shop</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+  <title>Пластинка — 33 ОБОРОТА</title>
+  <meta name="description" content="Карточка пластинки в виниловой лавке «33 ОБОРОТА»: описание, характеристики, состояние, доставка.">
+  <meta name="theme-color" content="#13322a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="product.html">Товар</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Заявка</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Дополнительно
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
-              <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body class="page-product">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-  <main class="container my-5">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-        <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Товар 1</li>
-      </ol>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><i class="topbar__dot" aria-hidden="true"></i>Москва, Покровка, 12 · ежедневно 11:00–21:00</span>
+      <span>Бесплатная доставка от 5 000 ₽</span>
+      <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <nav class="navbar navbar-expand-lg site-nav" aria-label="Основная навигация">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>
+            33 ОБОРОТА
+            <span class="brand__sub">виниловая лавка</span>
+          </span>
+        </a>
+
+        <div class="head-actions">
+          <button type="button" class="btn-icon" data-search-open aria-label="Открыть поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </button>
+          <a class="btn-icon wish-link" href="catalog.html?view=wishlist" data-wish-link aria-label="Избранное">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4 15.6 4 10.3A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 8 2.5c0 5.3-8 10-8 10Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            <span class="wish-link__count" data-wish-count hidden>0</span>
+          </a>
+          <button type="button" class="cart-btn" data-cart-open>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 4h2.2l2.2 10.2a2 2 0 0 0 2 1.6h7.3a2 2 0 0 0 2-1.6L20.5 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19.2" r="1.4" fill="currentColor"/><circle cx="17.5" cy="19.2" r="1.4" fill="currentColor"/></svg>
+            Корзина
+            <span class="cart-btn__count" data-cart-count hidden>0</span>
+          </button>
+        </div>
+
+        <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="nav-toggle__lines" aria-hidden="true"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Жанры</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="catalog.html?genre=rock">Рок</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=jazz">Джаз</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=electronic">Электроника</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=hiphop">Хип-хоп</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=soul">Соул и фанк</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=pop">Поп</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">О лавке</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div class="row g-4">
-      <div class="col-12 col-lg-6">
-        <div class="card shadow-sm">
-          <div class="placeholder-image bg-light border rounded d-flex align-items-center justify-content-center">
-            <span class="text-muted">Изображение товара</span>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav aria-label="Хлебные крошки">
+          <ol class="breadcrumb" id="breadcrumbs">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="container">
+        <div class="row g-4 g-lg-5" id="productLayout">
+          <div class="col-12 col-lg-6">
+            <div class="product__media" id="productCover"></div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div id="productInfo"></div>
           </div>
         </div>
+        <div id="productTabs"></div>
       </div>
-      <div class="col-12 col-lg-6">
-        <span class="badge bg-success mb-3">Новинка</span>
-        <h1 class="h2">Товар 1</h1>
-        <p class="lead text-muted">
-          Подробное описание учебного товара для страницы карточки.
-        </p>
-        <p class="fs-3 fw-bold">1000 руб.</p>
-        <div class="d-flex gap-2 mb-4">
-          <a class="btn btn-primary btn-lg" href="order.html">
-            Оформить заявку
-          </a>
-          <a class="btn btn-outline-secondary btn-lg" href="catalog.html">
-            Назад в каталог
-          </a>
+    </section>
+
+    <section class="section section--tight" id="related">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow">с этой же полки</p>
+            <h2 class="section-title mt-2">Может пригодиться</h2>
+          </div>
+          <a class="btn-line" href="catalog.html">Весь каталог</a>
         </div>
-        <div class="alert alert-warning" role="alert">
-          Это учебная карточка товара. Данные используются для демонстрации Bootstrap-компонентов.
-        </div>
+        <div class="row g-3 g-lg-4" id="relatedGrid"></div>
       </div>
-    </div>
-    <section class="mt-5">
-      <h2 class="h4 mb-3">Характеристики</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-bordered align-middle">
-          <tbody>
-            <tr>
-              <th scope="row">Категория</th>
-              <td>Учебные товары</td>
-            </tr>
-            <tr>
-              <th scope="row">Цена</th>
-              <td>1000 руб.</td>
-            </tr>
-            <tr>
-              <th scope="row">Наличие</th>
-              <td>В наличии</td>
-            </tr>
-          </tbody>
-        </table>
+    </section>
+
+    <section class="section section--tight" id="recentSection" hidden>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <h2 class="section-title">Вы недавно смотрели</h2>
+          </div>
+        </div>
+        <div class="row g-3 g-lg-4" id="recentGrid"></div>
       </div>
     </section>
   </main>
 
-  <section class="container my-5">
-    <h2 class="h4 mb-3">Частые вопросы</h2>
-    <div class="accordion" id="faqAccordion">
-      <div class="accordion-item">
-        <h3 class="accordion-header">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faqOne"
-            aria-expanded="true"
-            aria-controls="faqOne"
-          >
-            Можно ли оформить заявку без регистрации?
-          </button>
-        </h3>
-        <div
-          id="faqOne"
-          class="accordion-collapse collapse show"
-          data-bs-parent="#faqAccordion"
-        >
-          <div class="accordion-body">
-            Да, в учебном проекте заявка оформляется без регистрации.
-          </div>
+  <footer class="site-foot">
+    <div class="container">
+      <div class="site-foot__top">
+        <div>
+          <a class="brand" href="index.html" style="color:var(--paper)">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span>33 ОБОРОТА</span>
+          </a>
+          <p class="site-foot__about">
+            Виниловая лавка на Покровке. Продаём, меняем и слушаем пластинки с 2019 года.
+          </p>
+          <p class="site-foot__about" style="margin-top:0.6rem">
+            Москва, ул. Покровка, 12<br>
+            <a href="tel:+74951234567" style="text-decoration:underline">+7 (495) 123-45-67</a>
+          </p>
+        </div>
+        <div>
+          <h2>Каталог</h2>
+          <ul class="site-foot__links">
+            <li><a href="catalog.html">Все пластинки</a></li>
+            <li><a href="catalog.html?badge=new">Новый завоз</a></li>
+            <li><a href="catalog.html?condition=used">Б/у, проверенные</a></li>
+            <li><a href="catalog.html?genre=jazz">Джаз</a></li>
+            <li><a href="catalog.html?genre=electronic">Электроника</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Покупателю</h2>
+          <ul class="site-foot__links">
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="order.html">Оформление заказа</a></li>
+            <li><a href="index.html#faq">Доставка и возврат</a></li>
+            <li><a href="index.html#process">Как проверяем</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Лавка</h2>
+          <ul class="site-foot__links">
+            <li><a href="index.html#about">О нас</a></li>
+            <li><a href="index.html#reviews">Отзывы</a></li>
+            <li><a href="index.html#subscribe">Подписка</a></li>
+            <li><a href="tel:+74951234567">Позвонить</a></li>
+          </ul>
         </div>
       </div>
-      <div class="accordion-item">
-        <h3 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faqTwo"
-            aria-expanded="false"
-            aria-controls="faqTwo"
-          >
-            Где используется Bootstrap?
-          </button>
-        </h3>
-        <div
-          id="faqTwo"
-          class="accordion-collapse collapse"
-          data-bs-parent="#faqAccordion"
-        >
-          <div class="accordion-body">
-            Bootstrap используется для сетки, карточек, форм, навигации, сообщений и модальных окон.
-          </div>
-        </div>
+      <div class="site-foot__bottom">
+        <span>© <span data-year>2026</span> 33 ОБОРОТА</span>
+        <span>Учебный проект · цены и наличие демонстрационные</span>
+      </div>
+      <p class="site-foot__wordmark" aria-hidden="true">33 ОБОРОТА</p>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="container" style="padding:1rem 0">
+      <div class="alert alert-warning" role="alert">
+        Карточка пластинки собирается на JavaScript. Включите его, чтобы увидеть описание и характеристики.
       </div>
     </div>
-  </section>
+  </noscript>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/product.js"></script>
 </body>
 </html>

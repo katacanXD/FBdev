@@ -3,211 +3,482 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Bootstrap Shop</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+  <title>33 ОБОРОТА — виниловая лавка на Покровке</title>
+  <meta name="description" content="Виниловая лавка «33 ОБОРОТА»: рок, джаз, электроника и соул — от первопрессов до свежих переизданий. Каждую пластинку проверяем иглой перед продажей.">
+  <meta name="theme-color" content="#13322a">
+  <meta property="og:title" content="33 ОБОРОТА — виниловая лавка">
+  <meta property="og:description" content="Пластинки, которые хочется вертеть руками. Каталог, проверка состояния, доставка по России.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body>
-  <header class="bg-primary text-white py-4">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-8">
-          <h1 class="h3 mb-1">Bootstrap Shop</h1>
-          <p class="mb-0 opacity-75">
-            Учебный интернет-магазин на Bootstrap
-          </p>
-        </div>
-        <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-          <span class="badge bg-light text-primary">
-            КР №2
+<body class="page-home">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><i class="topbar__dot" aria-hidden="true"></i>Москва, Покровка, 12 · ежедневно 11:00–21:00</span>
+      <span>Бесплатная доставка от 5 000 ₽</span>
+      <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <nav class="navbar navbar-expand-lg site-nav" aria-label="Основная навигация">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>
+            33 ОБОРОТА
+            <span class="brand__sub">виниловая лавка</span>
           </span>
+        </a>
+
+        <div class="head-actions">
+          <button type="button" class="btn-icon" data-search-open aria-label="Открыть поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </button>
+          <a class="btn-icon wish-link" href="catalog.html?view=wishlist" data-wish-link aria-label="Избранное">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4 15.6 4 10.3A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 8 2.5c0 5.3-8 10-8 10Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            <span class="wish-link__count" data-wish-count hidden>0</span>
+          </a>
+          <button type="button" class="cart-btn" data-cart-open>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 4h2.2l2.2 10.2a2 2 0 0 0 2 1.6h7.3a2 2 0 0 0 2-1.6L20.5 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19.2" r="1.4" fill="currentColor"/><circle cx="17.5" cy="19.2" r="1.4" fill="currentColor"/></svg>
+            Корзина
+            <span class="cart-btn__count" data-cart-count hidden>0</span>
+          </button>
+        </div>
+
+        <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="nav-toggle__lines" aria-hidden="true"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav nav-links">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Жанры</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="catalog.html?genre=rock">Рок</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=jazz">Джаз</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=electronic">Электроника</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=hiphop">Хип-хоп</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=soul">Соул и фанк</a></li>
+                <li><a class="dropdown-item" href="catalog.html?genre=pop">Поп</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">О лавке</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Товар</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Заявка</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Дополнительно
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
-              <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-            </ul>
-          </li>
-        </ul>
+  <main id="main">
+    <!-- Hero: вертушка, которую можно включить -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__text">
+            <p class="eyebrow hero__kicker">лавка винила на Покровке</p>
+            <h1 class="hero__title">Пластинки, которые хочется <em>вертеть руками</em></h1>
+            <p class="hero__lead">
+              Рок, джаз, электроника и соул — от первопрессов до свежих переизданий.
+              Каждую пластинку проверяем иглой, прежде чем поставить на полку.
+            </p>
+            <div class="hero__cta">
+              <a class="btn-ink btn-lg" href="catalog.html">Смотреть каталог</a>
+              <a class="btn-line btn-lg" href="#process">Как мы проверяем</a>
+            </div>
+            <p class="hero__note">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2 19 6v5.6c0 4.3-3 7.4-7 9.2-4-1.8-7-4.9-7-9.2V6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2.2 2.2L15.4 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              14 дней на возврат, если пластинка не зашла
+            </p>
+          </div>
+
+          <div class="turntable" data-turntable data-now="Pink Floyd — The Dark Side of the Moon">
+            <div class="turntable__backdrop" aria-hidden="true"></div>
+            <div class="turntable__deck">
+              <p class="turntable__now"><i aria-hidden="true"></i><span data-turntable-now>на столе: Pink Floyd — The Dark Side of the Moon</span></p>
+              <button class="turntable__platter" type="button" data-platter aria-pressed="false" aria-label="Поставить пластинку">
+                <span class="disc">
+                  <span class="disc__label"><b>33</b><span>оборота</span></span>
+                  <span class="disc__hole" aria-hidden="true"></span>
+                </span>
+              </button>
+              <div class="tonearm" aria-hidden="true"></div>
+            </div>
+            <p class="turntable__hint" data-turntable-hint>Нажмите на пластинку</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Полки-разделители -->
+    <div class="crate">
+      <div class="container">
+        <div class="crate__row" id="crateRow" role="navigation" aria-label="Жанры в лавке">
+          <a class="crate__tab" href="catalog.html?genre=rock">Рок <small>7</small></a>
+          <a class="crate__tab" href="catalog.html?genre=jazz">Джаз <small>2</small></a>
+          <a class="crate__tab" href="catalog.html?genre=electronic">Электроника <small>6</small></a>
+          <a class="crate__tab" href="catalog.html?genre=hiphop">Хип-хоп <small>1</small></a>
+          <a class="crate__tab" href="catalog.html?genre=soul">Соул и фанк <small>2</small></a>
+          <a class="crate__tab" href="catalog.html?genre=pop">Поп <small>1</small></a>
+        </div>
       </div>
     </div>
-  </nav>
 
-  <main>
-    <section class="container my-5">
-      <div class="row align-items-center g-4">
-        <div class="col-12 col-lg-6">
-          <h2 class="display-5 fw-bold">
-            Учебный каталог товаров на Bootstrap
-          </h2>
-          <p class="lead text-muted">
-            Проект демонстрирует использование Bootstrap-сетки,
-            адаптивных колонок и базовых utility-классов.
-          </p>
-          <a class="btn btn-primary btn-lg" href="catalog.html">
-            Перейти в каталог
+    <!-- Свежий завоз -->
+    <section class="section" id="new">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow">полка недели</p>
+            <h2 class="section-title mt-2">Свежий завоз</h2>
+            <p class="section-lead">Четыре пластинки, которые мы поставили на полку в последнюю неделю. Обновляем по пятницам.</p>
+          </div>
+          <a class="btn-line" href="catalog.html">Весь каталог
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5 12h13M12.5 5.5 19 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="p-5 bg-light border rounded text-center">
-            <p class="mb-0 text-muted">
-              Здесь может быть изображение, баннер или промо-блок.
-            </p>
+        <div class="row g-3 g-lg-4" id="newGrid"></div>
+      </div>
+    </section>
+
+    <!-- Жанры -->
+    <section class="section section--paper2" id="genres">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow">разложено по полкам</p>
+            <h2 class="section-title mt-2">Выбирайте по настроению</h2>
+            <p class="section-lead">Шесть полок — от тяжёлого рока до электроники, которую лучше слушать в наушниках.</p>
+          </div>
+        </div>
+        <div class="row g-3 g-lg-4" id="genreGrid"></div>
+      </div>
+    </section>
+
+    <!-- Как проверяем -->
+    <section class="section section--dark on-dark" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow" style="color:var(--acid)">честное состояние</p>
+            <h2 class="section-title mt-2">Что значит «проверено иглой»</h2>
+            <p class="section-lead">У каждой пластинки в карточке стоит состояние. Оно не берётся из воздуха — вот четыре шага, которые проходит каждая запись.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title">Моем</h3>
+            <p class="step__text">Достаём из конверта, проходим антистатической щёткой и мойкой — без спирта и без спешки.</p>
+          </div>
+          <div class="step">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title">Слушаем</h3>
+            <p class="step__text">Прогоняем обе стороны целиком на вертушке. Отмечаем щелчки, потёртости и всё, что слышно.</p>
+          </div>
+          <div class="step">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title">Смотрим конверт</h3>
+            <p class="step__text">Углы, швы, вкладыш, наклейки. Всё, что видно, честно описываем в карточке.</p>
+          </div>
+          <div class="step">
+            <span class="step__num" aria-hidden="true">04</span>
+            <h3 class="step__title">Ставим цену</h3>
+            <p class="step__text">Цена зависит от состояния и редкости. Если пластинка «с оговоркой» — пишем об этом прямо.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container my-5">
-      <h2 class="text-center mb-4">Преимущества проекта</h2>
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Bootstrap-сетка</h3>
-            <p class="mb-0 text-muted">
-              Страница построена на 12-колоночной системе Bootstrap.
+    <!-- О лавке + фото -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-12 col-lg-5">
+            <p class="eyebrow">о лавке</p>
+            <h2 class="section-title mt-2">Комната, где можно слушать</h2>
+            <p class="section-lead mt-3">
+              Мы открылись в 2019 году на Покровке: два проигрывателя, стеллажи до потолка
+              и правило — любую пластинку можно поставить до покупки.
             </p>
+            <p class="mt-3 text-muted" style="font-size:0.94rem">
+              В лавке около 1 400 записей. Половина — новые переиздания, половина — б/у,
+              которое мы принимаем, проверяем и описываем. Онлайн-каталог показывает не всё:
+              редкие вещи живут только на полке.
+            </p>
+            <dl class="row mt-4 mb-0 g-3">
+              <div class="col-6">
+                <dt class="small text-muted fw-normal">Адрес</dt>
+                <dd class="mb-0 fw-bold">Москва, ул. Покровка, 12</dd>
+              </div>
+              <div class="col-6">
+                <dt class="small text-muted fw-normal">Часы</dt>
+                <dd class="mb-0 fw-bold">Ежедневно, 11:00–21:00</dd>
+              </div>
+            </dl>
           </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Адаптивность</h3>
-            <p class="mb-0 text-muted">
-              Колонки меняют ширину в зависимости от размера экрана.
-            </p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Готовая база</h3>
-            <p class="mb-0 text-muted">
-              Проект подготовлен к добавлению карточек, форм и модальных окон.
-            </p>
+          <div class="col-12 col-lg-7">
+            <div class="photo-strip">
+              <div class="photo photo--tall">
+                <img src="images/shop/crate.jpg" alt="Ящики с пластинками в лавке" loading="lazy" onerror="this.remove()">
+                <span class="photo__caption">Полка «новое» — разбирают быстрее всего</span>
+              </div>
+              <div class="photo-strip__side">
+                <div class="photo">
+                  <img src="images/shop/needle.jpg" alt="Игла на пластинке крупным планом" loading="lazy" onerror="this.remove()">
+                  <span class="photo__caption">Проверка иглой</span>
+                </div>
+                <div class="photo">
+                  <img src="images/shop/shelf.jpg" alt="Стеллаж с виниловыми пластинками" loading="lazy" onerror="this.remove()">
+                  <span class="photo__caption">Стеллаж в зале</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container my-5" id="popular">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0">Популярные товары</h2>
-        <a class="btn btn-outline-primary" href="catalog.html">
-          Все товары
-        </a>
+    <!-- Отзывы -->
+    <section class="section section--tight" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow">что говорят</p>
+            <h2 class="section-title mt-2">Не только про музыку</h2>
+          </div>
+        </div>
+        <div id="reviewCarousel" class="carousel slide reviews" data-bs-ride="carousel" data-bs-interval="7000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <figure class="review">
+                <div class="review__mark" aria-hidden="true">«</div>
+                <div>
+                  <blockquote class="review__text m-0">
+                    Пришёл за одним диском, ушёл с четырьмя. Продавец не давил: просто поставил
+                    послушать — и стало понятно, зачем это всё.
+                  </blockquote>
+                  <figcaption class="review__author">Дмитрий, 34 <span>· постоянный гость</span></figcaption>
+                </div>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="review">
+                <div class="review__mark" aria-hidden="true">«</div>
+                <div>
+                  <blockquote class="review__text m-0">
+                    Заказывала подарок и переживала за упаковку. Приехало в жёстком конверте,
+                    пластинка идеальная, внутри — открытка от лавки.
+                  </blockquote>
+                  <figcaption class="review__author">Анна, 28 <span>· заказ с доставкой</span></figcaption>
+                </div>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="review">
+                <div class="review__mark" aria-hidden="true">«</div>
+                <div>
+                  <blockquote class="review__text m-0">
+                    Секция б/у — отдельная любовь. Состояние описано честно: щелчков ровно
+                    столько, сколько обещали, ни одним больше.
+                  </blockquote>
+                  <figcaption class="review__author">Илья, 41 <span>· собирает джаз</span></figcaption>
+                </div>
+              </figure>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Отзыв 1"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Отзыв 2"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Отзыв 3"></button>
+          </div>
+        </div>
       </div>
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-success mb-3">Новинка</span>
-            <h3 class="h5">Товар 1</h3>
-            <p class="text-muted">
-              Краткое описание учебного товара.
-            </p>
-            <p class="fw-bold mb-3">1000 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--tight" id="faq">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-12 col-lg-4">
+            <p class="eyebrow">вопросы</p>
+            <h2 class="section-title mt-2">Коротко о главном</h2>
+            <p class="section-lead mt-3">Если чего-то не хватает — позвоните, мы отвечаем в лавке с 11 до 21.</p>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="accordion faq" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    Можно ли послушать пластинку перед покупкой?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Да. В зале два проигрывателя и наушники: любую запись из каталога можно поставить
+                    до оплаты. Онлайн это не работает, но мы всегда подскажем по телефону, как звучит издание.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Что означает состояние VG+?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Это международная шкала состояния пластинки. VG+ — заметных царапин нет,
+                    возможны лёгкие следы от конверта, звук чистый, но может быть редкий тихий щелчок.
+                    Мы всегда проверяем иглой и пишем, что именно слышно.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    Как быстро вы доставляете?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    По Москве — курьером на следующий день, 390 ₽, бесплатно от 5 000 ₽.
+                    В пункт выдачи и по России — 2–5 дней. Самовывоз с Покровки бесплатный,
+                    обычно готов через час после заказа.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    Можно вернуть пластинку?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Да, 14 дней с момента получения, если пластинка не игралась и сохранён конверт.
+                    Если брак заметили мы — заменим или вернём деньги, доставку берём на себя.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    Принимаете пластинки на продажу?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Да, по субботам с 12 до 18. Приносите — послушаем, оценим и предложим цену.
+                    Если вещь редкая, можем взять на комиссию.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-warning text-dark mb-3">Хит</span>
-            <h3 class="h5">Товар 2</h3>
-            <p class="text-muted">
-              Краткое описание учебного товара.
+      </div>
+    </section>
+
+    <!-- Подписка -->
+    <section class="section section--tight" id="subscribe">
+      <div class="container">
+        <div class="subscribe">
+          <div>
+            <h2 class="subscribe__title">Письмо, когда привозим</h2>
+            <p class="mt-2" style="max-width:38ch">
+              Раз в две недели — новые поступления, пара редких находок и одна пластинка,
+              которую стоит послушать целиком.
             </p>
-            <p class="fw-bold mb-3">1500 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-danger mb-3">Скидка</span>
-            <h3 class="h5">Товар 3</h3>
-            <p class="text-muted">
-              Краткое описание учебного товара.
-            </p>
-            <p class="fw-bold mb-3">2000 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
+          <div>
+            <form class="subscribe__form" data-subscribe novalidate>
+              <label class="visually-hidden" for="subscribeEmail">Ваш e-mail</label>
+              <input class="form-control" id="subscribeEmail" name="email" type="email" placeholder="you@example.com" required>
+              <button class="btn-ink" type="submit">Подписаться</button>
+            </form>
+            <p class="subscribe__hint">Без спама. Отписаться можно в один клик.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="site-foot">
     <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-md-6">
-          <p class="mb-0">
-            &copy; 2026 Bootstrap Shop. Учебный проект.
+      <div class="site-foot__top">
+        <div>
+          <a class="brand" href="index.html" style="color:var(--paper)">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span>33 ОБОРОТА</span>
+          </a>
+          <p class="site-foot__about">
+            Виниловая лавка на Покровке. Продаём, меняем и слушаем пластинки с 2019 года.
+          </p>
+          <p class="site-foot__about" style="margin-top:0.6rem">
+            Москва, ул. Покровка, 12<br>
+            <a href="tel:+74951234567" style="text-decoration:underline">+7 (495) 123-45-67</a>
           </p>
         </div>
-        <div class="col-12 col-md-6 text-md-end">
-          <a class="text-white text-decoration-none me-3" href="catalog.html">
-            Каталог
-          </a>
-          <a class="text-white text-decoration-none" href="order.html">
-            Заявка
-          </a>
+        <div>
+          <h2>Каталог</h2>
+          <ul class="site-foot__links">
+            <li><a href="catalog.html">Все пластинки</a></li>
+            <li><a href="catalog.html?badge=new">Новый завоз</a></li>
+            <li><a href="catalog.html?condition=used">Б/у, проверенные</a></li>
+            <li><a href="catalog.html?genre=jazz">Джаз</a></li>
+            <li><a href="catalog.html?genre=electronic">Электроника</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Покупателю</h2>
+          <ul class="site-foot__links">
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="order.html">Оформление заказа</a></li>
+            <li><a href="#faq">Доставка и возврат</a></li>
+            <li><a href="#process">Как проверяем</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Лавка</h2>
+          <ul class="site-foot__links">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#subscribe">Подписка</a></li>
+            <li><a href="tel:+74951234567">Позвонить</a></li>
+          </ul>
         </div>
       </div>
+      <div class="site-foot__bottom">
+        <span>© <span data-year>2026</span> 33 ОБОРОТА</span>
+        <span>Учебный проект · цены и наличие демонстрационные</span>
+      </div>
+      <p class="site-foot__wordmark" aria-hidden="true">33 ОБОРОТА</p>
     </div>
   </footer>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <noscript>
+    <div class="container" style="padding:1rem 0">
+      <div class="alert alert-warning" role="alert">
+        Каталог, корзина и фильтры работают на JavaScript. Включите его, чтобы увидеть полки.
+      </div>
+    </div>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
