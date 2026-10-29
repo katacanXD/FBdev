@@ -41,6 +41,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -116,6 +117,9 @@ a:focus-visible {
    4. БЭМ-блок «Шапка сайта»
    =============================== */
 .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
     background-color: var(--color-surface);
 }
 
