@@ -9,7 +9,7 @@ function initPublicationFilters() {
     return;
   }
 
-  const cards = Array.prototype.slice.call(list.querySelectorAll('[data-publication]'));
+  const cards = Array.from(list.querySelectorAll('[data-publication]'));
   const search = document.getElementById('publicationSearch');
   const topic = document.getElementById('publicationTopic');
   const sort = document.getElementById('publicationSort');

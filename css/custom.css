@@ -3,8 +3,8 @@
   --surface: #f8faf8;
   --ink: #0d1f1c;
   --muted: #5b6b66;
-  --accent: #e2542c;
-  --accent-dark: #b83c1b;
+  --accent: #c9431f;
+  --accent-dark: #9b2f14;
   --teal: #1f6f5f;
   --line: #cfd8d3;
   --serif: Georgia, "Times New Roman", serif;
@@ -60,7 +60,7 @@ a:hover {
   --bs-btn-hover-border-color: var(--accent-dark);
   --bs-btn-active-bg: var(--accent-dark);
   --bs-btn-active-border-color: var(--accent-dark);
-  --bs-btn-focus-shadow-rgb: 226, 84, 44;
+  --bs-btn-focus-shadow-rgb: 201, 67, 31;
 }
 
 .btn-outline-primary {
@@ -534,7 +534,7 @@ h2[id] {
 .form-control:focus,
 .form-select:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 0.2rem rgba(226, 84, 44, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(201, 67, 31, 0.15);
 }
 
 .form-label {
@@ -697,7 +697,7 @@ h2[id] {
 
 .form-check-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 0.2rem rgba(226, 84, 44, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(201, 67, 31, 0.15);
 }
 
 .filter-bar {
@@ -914,7 +914,7 @@ h2[id] {
 .map-pin {
   background: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 0 6px rgba(226, 84, 44, 0.18);
+  box-shadow: 0 0 0 6px rgba(201, 67, 31, 0.18);
   height: 14px;
   position: absolute;
   width: 14px;

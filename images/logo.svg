@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="НИИ ИТ">
   <rect width="40" height="40" fill="#0d1f1c"/>
   <path d="M11 30V10M29 30V10M11 30L29 10" stroke="#f8faf8" stroke-width="3" fill="none"/>
-  <rect x="0" y="0" width="40" height="4" fill="#e2542c"/>
+  <rect x="0" y="0" width="40" height="4" fill="#c9431f"/>
 </svg>
