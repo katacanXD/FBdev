@@ -6,7 +6,7 @@
   <meta name="description" content="НИИ информационных технологий: открытые исследования в области ИИ, кибербезопасности, разработки ПО и сетей.">
   <title>НИИ ИТ — исследования в сфере информационных технологий</title>
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
@@ -27,6 +27,9 @@
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
             <li class="nav-item"><a class="nav-link" href="catalog.html">Публикации</a></li>
+            <li class="nav-item"><a class="nav-link" href="requirements.html">Требования</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Институт</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm" href="order.html">Подать статью</a></li>
           </ul>
         </div>
@@ -115,6 +118,48 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="directions-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Направления</p>
+            <h2 class="section-title" id="directions-title">Четыре исследовательских направления</h2>
+          </div>
+          <a class="text-link" href="about.html">Об институте</a>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="direction-card">
+              <div class="direction-code">AI</div>
+              <h3>Искусственный интеллект</h3>
+              <p>Модели, данные и объяснимые алгоритмы.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="direction-card">
+              <div class="direction-code">SEC</div>
+              <h3>Кибербезопасность</h3>
+              <p>Защита систем, кода и цепочек поставок.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="direction-card">
+              <div class="direction-code">DEV</div>
+              <h3>Разработка ПО</h3>
+              <p>Архитектура, тестирование и инженерия.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="direction-card">
+              <div class="direction-code">NET</div>
+              <h3>Сети и системы</h3>
+              <p>Распределённые сервисы и маршрутизация.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-surface" aria-labelledby="latest-title">
       <div class="container">
         <div class="section-head">
@@ -183,6 +228,56 @@
       </div>
     </section>
 
+    <section class="section section-surface" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">События</p>
+            <h2 class="section-title" id="events-title">Ближайшие мероприятия</h2>
+          </div>
+          <a class="text-link" href="about.html#events">Все события</a>
+        </div>
+        <div id="eventsCarousel" class="carousel slide event-carousel" data-bs-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="event-slide">
+                <p class="event-date">12–14 ноября 2026</p>
+                <h3>IITR Conf 2026: доверие к искусственному интеллекту</h3>
+                <p>Ежегодная конференция института. Москва, конференц-зал НИИ ИТ.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="event-slide">
+                <p class="event-date">28 октября 2026</p>
+                <h3>Семинар: безопасность больших языковых моделей</h3>
+                <p>Открытый онлайн-семинар лаборатории кибербезопасности.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="event-slide">
+                <p class="event-date">5 декабря 2026</p>
+                <h3>День открытых исследований</h3>
+                <p>Экскурсии по лабораториям и встречи с исследователями.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+            <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+            <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Назад</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Вперёд</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <div class="cta-band">
@@ -209,6 +304,9 @@
           <ul class="list-unstyled footer-links">
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Публикации</a></li>
+            <li><a href="requirements.html">Требования</a></li>
+            <li><a href="about.html">Институт</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
             <li><a href="order.html">Подать статью</a></li>
           </ul>
         </div>
@@ -223,6 +321,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
