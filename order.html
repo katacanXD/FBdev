@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Демонстрационная форма подачи статьи в НИИ информационных технологий.">
+  <title>Подать статью — НИИ ИТ</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="images/logo.svg" alt="" width="36" height="36">
+          <span>
+            <span class="brand-name d-block">НИИ ИТ</span>
+            <span class="brand-sub d-none d-sm-block">институт информационных технологий</span>
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalog.html">Публикации</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm active" aria-current="page" href="order.html">Подать статью</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container pt-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Подать статью</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section pt-3">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-12 col-lg-8">
+            <p class="section-label">Публикация</p>
+            <h1 class="display-title">Подать статью</h1>
+            <p class="lead text-muted">Заполните демонстрационную форму. Она показывает состав заявки, но не отправляет данные.</p>
+
+            <div class="alert alert-info" role="alert">Демо-режим: файлы не загружаются, данные никуда не отправляются.</div>
+
+            <div class="card">
+              <div class="card-body p-4">
+                <form action="#" onsubmit="return false;">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label for="authorName" class="form-label">ФИО автора *</label>
+                      <input id="authorName" class="form-control" type="text" name="author-name" autocomplete="name" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="authorEmail" class="form-label">E-mail *</label>
+                      <input id="authorEmail" class="form-control" type="email" name="author-email" autocomplete="email" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="authorOrganization" class="form-label">Организация</label>
+                      <input id="authorOrganization" class="form-control" type="text" name="organization">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="authorPhone" class="form-label">Телефон</label>
+                      <div class="input-group">
+                        <span class="input-group-text">+7</span>
+                        <input id="authorPhone" class="form-control" type="tel" name="phone" placeholder="900 000-00-00">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="paperTitle" class="form-label">Название статьи *</label>
+                      <input id="paperTitle" class="form-control" type="text" name="title" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="paperTopic" class="form-label">Направление *</label>
+                      <select id="paperTopic" class="form-select" name="topic" required>
+                        <option value="" selected disabled>Выберите направление</option>
+                        <option value="ai">Искусственный интеллект</option>
+                        <option value="sec">Кибербезопасность</option>
+                        <option value="dev">Разработка ПО</option>
+                        <option value="net">Сети и распределённые системы</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="paperFile" class="form-label">Файл статьи *</label>
+                      <input id="paperFile" class="form-control" type="file" name="file" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="paperAbstract" class="form-label">Аннотация *</label>
+                      <textarea id="paperAbstract" class="form-control" name="abstract" rows="4" required></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input id="paperConsent" class="form-check-input" type="checkbox" name="consent" required>
+                        <label class="form-check-label" for="paperConsent">Согласен на обработку персональных данных *</label>
+                      </div>
+                    </div>
+                    <div class="col-12 d-flex flex-wrap gap-2">
+                      <button class="btn btn-primary" type="submit">Отправить заявку</button>
+                      <button class="btn btn-outline-secondary" type="reset">Очистить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <aside class="col-12 col-lg-4">
+            <div class="card side-card">
+              <div class="card-header">Что дальше</div>
+              <div class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><strong>1.</strong> Проверка заполнения формы</li>
+                  <li class="list-group-item"><strong>2.</strong> Проверка требований редакцией</li>
+                  <li class="list-group-item"><strong>3.</strong> Рецензирование материала</li>
+                  <li class="list-group-item"><strong>4.</strong> Публикация на сайте</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-muted small mt-3 mb-0">В демо-версии этапы описаны, но не выполняются.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <div class="footer-brand">НИИ ИТ</div>
+          <p class="footer-text">Научно-исследовательский институт информационных технологий. Демонстрационный учебный проект.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="footer-title">Разделы</div>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Публикации</a></li>
+            <li><a href="order.html">Подать статью</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <div class="footer-title">Контакты</div>
+          <p class="footer-text mb-1">127015, Москва, ул. Новодмитровская, 2</p>
+          <p class="footer-text mb-1"><a href="mailto:info@iitr.ru">info@iitr.ru</a></p>
+          <p class="footer-text mb-0">+7 (495) 120-45-67</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 НИИ ИТ. Учебный проект. Публикации и реквизиты — демонстрационные.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
