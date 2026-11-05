@@ -12,3 +12,5 @@ Thumbs.db
 *.temp
 
 .env
+js/map-config.js
+_site/
