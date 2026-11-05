@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initImageFallbacks();
   initPublicationFilters();
   initOrderForm();
+  initBackToTop();
 });
 
 function initImageFallbacks() {
@@ -106,5 +107,25 @@ function initOrderForm() {
 
     form.classList.remove('was-validated');
     form.reset();
+  });
+}
+
+function initBackToTop() {
+  const button = document.querySelector('[data-to-top]');
+  if (!button) {
+    return;
+  }
+
+  function toggleButton() {
+    button.classList.toggle('is-visible', window.scrollY > 480);
+  }
+
+  window.addEventListener('scroll', toggleButton, { passive: true });
+  toggleButton();
+
+  button.addEventListener('click', function () {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const behavior = reduceMotion || document.hidden ? 'auto' : 'smooth';
+    window.scrollTo({ top: 0, behavior: behavior });
   });
 }
