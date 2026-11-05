@@ -840,6 +840,21 @@ h2[id] {
   max-width: 38ch;
 }
 
+.footer-contact {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.55rem;
+  max-width: none;
+}
+
+.footer-icon {
+  color: #c98a72;
+  flex: 0 0 16px;
+  height: 16px;
+  margin-top: 0.22rem;
+  width: 16px;
+}
+
 .footer-title {
   color: #fff;
   font-size: 0.95rem;
