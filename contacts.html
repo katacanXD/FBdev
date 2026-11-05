@@ -32,7 +32,7 @@
                     <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
                 </li>
                 <li class="site-nav__item">
-                    <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+                    <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
                 </li>
             </ul>
         </nav>
@@ -57,9 +57,64 @@
     <section class="section" id="feedback">
         <h2 class="section__title">Обратная связь</h2>
         <p>
-            Для отправки заявки используйте форму в модальном окне на главной странице.
+            Напишите нам — ответим на указанный e-mail в течение рабочего дня.
         </p>
-        <a class="button button--primary" href="index.html#contacts">Перейти к форме</a>
+        <form class="order-form" id="feedback-form" action="#" method="post" novalidate>
+            <div class="order-form__field">
+                <label class="order-form__label" for="feedback-name">Имя</label>
+                <input
+                        class="order-form__input"
+                        id="feedback-name"
+                        name="name"
+                        type="text"
+                        placeholder="Введите ваше имя"
+                        minlength="2"
+                        autocomplete="given-name"
+                        required
+                >
+            </div>
+            <div class="order-form__field">
+                <label class="order-form__label" for="feedback-email">E-mail</label>
+                <input
+                        class="order-form__input"
+                        id="feedback-email"
+                        name="email"
+                        type="email"
+                        placeholder="example@mail.ru"
+                        autocomplete="email"
+                        required
+                >
+            </div>
+            <div class="order-form__field">
+                <label class="order-form__label" for="feedback-message">Сообщение</label>
+                <textarea
+                        class="order-form__textarea"
+                        id="feedback-message"
+                        name="message"
+                        rows="4"
+                        placeholder="Чем можем помочь?"
+                        required
+                ></textarea>
+            </div>
+            <div class="order-form__field">
+                <label class="order-form__label">
+                    <input
+                            class="order-form__checkbox"
+                            id="feedback-agreement"
+                            name="agreement"
+                            type="checkbox"
+                            required
+                    >
+                    Я согласен на обработку данных
+                </label>
+            </div>
+            <div class="order-form__actions">
+                <button class="button button--primary" type="submit">Отправить сообщение</button>
+            </div>
+        </form>
+        <p class="success-message" id="feedback-success" hidden>
+            Сообщение отправлено! Ответим на указанный e-mail.
+        </p>
     </section>
 </main>
 <footer class="site-footer">
@@ -68,6 +123,8 @@
 </footer>
 
 <a class="scroll-top" href="#" aria-label="Наверх страницы">↑</a>
+
+<script src="js/main.js" defer></script>
 
 </body>
 </html>

@@ -32,7 +32,7 @@
                     <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
                 </li>
                 <li class="site-nav__item">
-                    <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+                    <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
                 </li>
             </ul>
         </nav>
@@ -46,9 +46,17 @@
     </nav>
     <section class="section">
         <article class="product-card product-card--featured">
+            <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--hit">Хит</span>
+            </div>
             <img class="product-card__photo product-card__photo--large" src="images/fara-kruglaya-komplekt-yamaha-ybr125-2009.jpg"
                  alt="Фара круглая в комплекте для Yamaha YBR 125">
             <h1 class="product-card__title">Фара круглая в комплекте</h1>
+            <p class="product-card__rating product-card__rating--large" aria-label="Рейтинг 4.8 из 5, 126 отзывов">
+                <span class="product-card__stars" style="--rating: 4.8" aria-hidden="true">★★★★★</span>
+                <span class="product-card__rating-value">4.8</span>
+                <span class="product-card__reviews">126 отзывов</span>
+            </p>
             <p class="product-card__description">
                 Круглая фара в сборе: корпус, стекло и кронштейн. В комплекте идут
                 поворотники — всё подходит на Yamaha YBR 125 2009 года без доработок.
@@ -81,6 +89,62 @@
             </tr>
             </tbody>
         </table>
+    </section>
+    <section class="section" aria-label="Отзывы покупателей">
+        <h2 class="section__title">Отзывы</h2>
+        <div class="reviews">
+            <article class="review">
+                <p class="review__header">
+                    <span class="review__author">Алексей</span>
+                    <span class="product-card__stars" style="--rating: 5" aria-hidden="true">★★★★★</span>
+                </p>
+                <p class="review__text">
+                    Фара встала как родная: крепления совпали без доработок, зазоры ровные, регулировка не сбилась.
+                    Светит отлично, пучок ровный, встречку не слепит. Поворотники в комплекте — приятный бонус,
+                    не пришлось отдельно докупать. Упаковка была надёжная, всё пришло без сколов и царапин.
+                    Пользуюсь уже пару недель — нареканий нет, рекомендую.
+                </p>
+            </article>
+
+            <article class="review">
+                <p class="review__header">
+                    <span class="review__author">Марина</span>
+                    <span class="product-card__stars" style="--rating: 4.5" aria-hidden="true">★★★★★</span>
+                </p>
+                <p class="review__text">
+                    Кронштейн пришлось чуть подогнуть по месту, но это заняло пару минут и не испортило вид.
+                    В остальном качество хорошее: металл плотный, крепёж в комплекте, покраска ровная.
+                    Доставка быстрая, продавец отвечал на вопросы без задержек. Если бы не небольшая подгонка,
+                    поставила бы твёрдую пятёрку, а так — 4,5.
+                </p>
+            </article>
+
+            <article class="review">
+                <p class="review__header">
+                    <span class="review__author">Сергей</span>
+                    <span class="product-card__stars" style="--rating: 5" aria-hidden="true">★★★★★</span>
+                </p>
+                <p class="review__text">
+                    Заказывал боковое зеркало с подогревом. Пришло быстро, упаковано в пузырчатую плёнку и коробку,
+                    стекло целое, крепления не погнуты. Установил сам за полчаса, разъём подошёл без переделок.
+                    Подогрев работает, обзор нормальный, зеркало не дребезжит на неровностях. Продавец молодцы,
+                    отправили в день заказа и дали трек. Буду обращаться ещё.
+                </p>
+            </article>
+
+            <article class="review">
+                <p class="review__header">
+                    <span class="review__author">Ольга</span>
+                    <span class="product-card__stars" style="--rating: 4.5" aria-hidden="true">★★★★★</span>
+                </p>
+                <p class="review__text">
+                    Брала решётку радиатора. В целом качество порадовало: пластик плотный, не хрупкий,
+                    крепления совпали, установка заняла немного времени. Цвет совпадает с кузовом,
+                    зазоры почти незаметные. Единственное — с одной стороны пришлось чуть подтянуть крепёж,
+                    чтобы село идеально ровно. Доставили раньше срока, упаковка была хорошая. За свои деньги — отличный вариант.
+                </p>
+            </article>
+        </div>
     </section>
 </main>
 <footer class="site-footer">

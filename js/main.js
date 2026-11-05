@@ -1,75 +1,109 @@
-// Получаем модальное окно по id.
-const orderDialog = document.getElementById('order-dialog');
+// ======================================================
+// Общие помощники
+// ======================================================
 
-// Получаем все кнопки заказа в карточках товаров.
-const orderButtons = document.querySelectorAll('.product-card__button');
-
-// Получаем кнопку закрытия модального окна.
-const closeDialogButton = document.getElementById('close-order-dialog');
-
-// Получаем скрытое поле, в которое будет записан выбранный товар.
-const selectedProductInput = document.getElementById('selected-product');
-
-// Перебираем все кнопки «Заказать».
-orderButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        // Получаем название товара из data-атрибута.
-        const productName = button.dataset.product;
-
-        // Записываем название товара в скрытое поле формы.
-        selectedProductInput.value = productName;
-
-        // Открываем модальное окно.
-        orderDialog.showModal();
-    });
-});
-
-// Закрываем модальное окно по кнопке «Закрыть».
-closeDialogButton.addEventListener('click', () => {
-    orderDialog.close();
-});
-
-// Получаем форму заявки.
-const orderForm = document.getElementById('order-form');
-
-// Получаем сообщение об успешной отправке.
-const successMessage = document.getElementById('success-message');
-
-// Обрабатываем отправку формы.
-orderForm.addEventListener('submit', (event) => {
-    // Отменяем стандартную отправку формы,
-    // потому что backend пока не подключён.
-    event.preventDefault();
+// Проверяет форму по встроенным HTML-ограничениям
+// и подсвечивает поля с ошибками.
+function validateForm(form) {
+    const formElements = Array.from(form.elements);
 
     // Сбрасываем предыдущие признаки ошибок.
-    const formElements = Array.from(orderForm.elements);
-
     formElements.forEach((element) => {
         if (element.willValidate) {
             element.removeAttribute('aria-invalid');
         }
     });
 
-    // Проверяем встроенные HTML-ограничения формы.
-    if (!orderForm.checkValidity()) {
-        formElements.forEach((element) => {
-            if (element.willValidate && !element.checkValidity()) {
-                element.setAttribute('aria-invalid', 'true');
-            }
-        });
-
-        // Показываем стандартные сообщения браузера.
-        orderForm.reportValidity();
-        return;
+    if (form.checkValidity()) {
+        return true;
     }
 
-    // Показываем сообщение об успешной отправке.
-    successMessage.hidden = false;
+    formElements.forEach((element) => {
+        if (element.willValidate && !element.checkValidity()) {
+            element.setAttribute('aria-invalid', 'true');
+        }
+    });
 
-    // Очищаем форму.
-    orderForm.reset();
+    // Показываем стандартные сообщения браузера.
+    form.reportValidity();
+    return false;
+}
 
-    // Закрываем модальное окно.
-    orderDialog.close();
-});
+// ======================================================
+// Модальное окно заявки (главная страница)
+// ======================================================
 
+const orderDialog = document.getElementById('order-dialog');
+const orderButtons = document.querySelectorAll('.product-card__button[data-product]');
+const closeDialogButton = document.getElementById('close-order-dialog');
+const selectedProductInput = document.getElementById('selected-product');
+
+// Перебираем все кнопки «Заказать» в карточках товаров.
+if (orderDialog && selectedProductInput) {
+    orderButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            // Записываем название товара в скрытое поле формы.
+            selectedProductInput.value = button.dataset.product;
+
+            // Открываем модальное окно.
+            orderDialog.showModal();
+        });
+    });
+}
+
+// Закрываем модальное окно по кнопке «Закрыть».
+if (orderDialog && closeDialogButton) {
+    closeDialogButton.addEventListener('click', () => {
+        orderDialog.close();
+    });
+}
+
+// ======================================================
+// Форма заявки
+// ======================================================
+
+const orderForm = document.getElementById('order-form');
+const orderSuccess = document.getElementById('success-message');
+
+if (orderForm && orderSuccess) {
+    orderForm.addEventListener('submit', (event) => {
+        // Отменяем стандартную отправку формы,
+        // потому что backend пока не подключён.
+        event.preventDefault();
+
+        if (!validateForm(orderForm)) {
+            return;
+        }
+
+        // Показываем сообщение об успешной отправке.
+        orderSuccess.hidden = false;
+
+        // Очищаем форму.
+        orderForm.reset();
+
+        if (orderDialog) {
+            orderDialog.close();
+        }
+    });
+}
+
+// ======================================================
+// Форма обратной связи (страница «Контакты»)
+// ======================================================
+
+const feedbackForm = document.getElementById('feedback-form');
+const feedbackSuccess = document.getElementById('feedback-success');
+
+if (feedbackForm && feedbackSuccess) {
+    feedbackForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (!validateForm(feedbackForm)) {
+            return;
+        }
+
+        feedbackSuccess.hidden = false;
+        feedbackForm.reset();
+        feedbackSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+}

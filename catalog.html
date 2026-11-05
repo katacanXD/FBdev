@@ -32,7 +32,7 @@
                     <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
                 </li>
                 <li class="site-nav__item">
-                    <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+                    <a class="site-nav__link" href="contacts.html#feedback">Обратная связь</a>
                 </li>
             </ul>
         </nav>
@@ -84,9 +84,17 @@
             <h2>Список товаров</h2>
             <div class="products-grid">
                 <article class="product-card product-card--featured">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
                     <img class="product-card__photo" src="images/fara-kruglaya-komplekt-yamaha-ybr125-2009.jpg"
                          alt="Фара круглая в комплекте для Yamaha YBR 125">
                     <h3 class="product-card__title">Фара круглая в комплекте</h3>
+                    <p class="product-card__rating" aria-label="Рейтинг 4.8 из 5, 126 отзывов">
+                        <span class="product-card__stars" style="--rating: 4.8" aria-hidden="true">★★★★★</span>
+                        <span class="product-card__rating-value">4.8</span>
+                        <span class="product-card__reviews">126 отзывов</span>
+                    </p>
                     <p class="product-card__description">Фара в сборе с кронштейном и поворотниками для YBR 125 2009 года.</p>
                     <p class="product-card__price">3 200 руб.</p>
                     <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
@@ -95,47 +103,92 @@
                     <img class="product-card__photo" src="images/povorotniki-zadnie-yamaha-ybr-125-2004-2008.png"
                          alt="Задние поворотники для Yamaha YBR 125">
                     <h3 class="product-card__title">Задние поворотники</h3>
+                    <p class="product-card__rating" aria-label="Рейтинг 4.5 из 5, 58 отзывов">
+                        <span class="product-card__stars" style="--rating: 4.5" aria-hidden="true">★★★★★</span>
+                        <span class="product-card__rating-value">4.5</span>
+                        <span class="product-card__reviews">58 отзывов</span>
+                    </p>
                     <p class="product-card__description">Пара поворотников с резиновыми ножками для YBR 125 2004–2008 годов.</p>
                     <p class="product-card__price">1 450 руб.</p>
                     <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
                 </article>
                 <article class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
                     <img class="product-card__photo" src="images/pribornaya-panel-ybr-125.jpg"
                          alt="Приборная панель для Yamaha YBR 125">
                     <h3 class="product-card__title">Приборная панель</h3>
+                    <p class="product-card__rating" aria-label="Рейтинг 4.7 из 5, 94 отзыва">
+                        <span class="product-card__stars" style="--rating: 4.7" aria-hidden="true">★★★★★</span>
+                        <span class="product-card__rating-value">4.7</span>
+                        <span class="product-card__reviews">94 отзыва</span>
+                    </p>
                     <p class="product-card__description">Спидометр и тахометр с подсветкой, разъёмы в комплекте.</p>
                     <p class="product-card__price">4 900 руб.</p>
                     <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
                 </article>
                 <article class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                    </div>
                     <img class="product-card__photo" src="images/zerkala-yamaha-ybr-125-novogo-obrazca.png"
                          alt="Зеркала нового образца для Yamaha YBR 125">
                     <h3 class="product-card__title">Зеркала нового образца</h3>
+                    <p class="product-card__rating" aria-label="Рейтинг 4.3 из 5, 41 отзыв">
+                        <span class="product-card__stars" style="--rating: 4.3" aria-hidden="true">★★★★★</span>
+                        <span class="product-card__rating-value">4.3</span>
+                        <span class="product-card__reviews">41 отзыв</span>
+                    </p>
                     <p class="product-card__description">Пара зеркал в чёрных корпусах, регулируемые ножки, крепление M10.</p>
                     <p class="product-card__price">1 900 руб.</p>
                     <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
                 </article>
                 <article class="product-card product-card--discount">
-                    <span class="product-card__badge">Скидка</span>
+                    <div class="product-card__badges">
+                        <span class="product-card__badge">Скидка</span>
+                        <span class="product-card__badge product-card__badge--hit">Хит</span>
+                    </div>
                     <img class="product-card__photo" src="images/cilindr-150cc-yamaha-ybr125-komplekt.jpg"
                          alt="Цилиндр 150 см³ в комплекте для Yamaha YBR 125">
                     <h3 class="product-card__title">Цилиндр 150 см³ в комплекте</h3>
+                    <p class="product-card__rating" aria-label="Рейтинг 4.9 из 5, 203 отзыва">
+                        <span class="product-card__stars" style="--rating: 4.9" aria-hidden="true">★★★★★</span>
+                        <span class="product-card__rating-value">4.9</span>
+                        <span class="product-card__reviews">203 отзыва</span>
+                    </p>
                     <p class="product-card__description">Цилиндр с поршнем и кольцами: прибавка мощности без доработок.</p>
                     <p class="product-card__price">8 500 руб.</p>
                     <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
                 </article>
                 <article class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                    </div>
                     <img class="product-card__photo" src="images/dugi-zashhitnye-yamaha-ybr-125-vid-3.png"
                          alt="Защитные дуги для Yamaha YBR 125">
                     <h3 class="product-card__title">Дуги защитные</h3>
+                    <p class="product-card__rating" aria-label="Рейтинг 4.6 из 5, 77 отзывов">
+                        <span class="product-card__stars" style="--rating: 4.6" aria-hidden="true">★★★★★</span>
+                        <span class="product-card__rating-value">4.6</span>
+                        <span class="product-card__reviews">77 отзывов</span>
+                    </p>
                     <p class="product-card__description">Дуги двигателя с чёрным покрытием, крепление в штатные точки.</p>
                     <p class="product-card__price">2 800 руб.</p>
                     <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
                 </article>
                 <article class="product-card">
+                    <div class="product-card__badges">
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                    </div>
                     <img class="product-card__photo" src="images/krylo-jenduro-perednee-krasnoe-ybr125.jpg"
                          alt="Переднее крыло эндуро для Yamaha YBR 125">
                     <h3 class="product-card__title">Крыло эндуро переднее</h3>
+                    <p class="product-card__rating" aria-label="Рейтинг 4.4 из 5, 33 отзыва">
+                        <span class="product-card__stars" style="--rating: 4.4" aria-hidden="true">★★★★★</span>
+                        <span class="product-card__rating-value">4.4</span>
+                        <span class="product-card__reviews">33 отзыва</span>
+                    </p>
                     <p class="product-card__description">Красное переднее крыло в стиле эндуро, ставится без переделок.</p>
                     <p class="product-card__price">2 400 руб.</p>
                     <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
