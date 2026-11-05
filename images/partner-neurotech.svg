@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-label="NeuroTech Labs">
+  <g fill="none" stroke="#1f6f5f" stroke-width="3">
+    <path d="M28 18 42 26v18L28 52 14 44V26Z"/>
+    <path d="M28 30v12M22 33l12 6M34 33l-12 6"/>
+  </g>
+  <text x="58" y="40" fill="#1f6f5f" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">NEUROTECH</text>
+  <text x="58" y="57" fill="#5b6b66" font-family="Segoe UI, Arial, sans-serif" font-size="10" letter-spacing="3">LABS</text>
+</svg>

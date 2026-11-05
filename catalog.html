@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Демонстрационный каталог публикаций НИИ информационных технологий.">
+  <meta name="description" content="Каталог публикаций НИИ информационных технологий: искусственный интеллект, кибербезопасность, разработка ПО и сети.">
   <title>Публикации — НИИ ИТ</title>
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -50,13 +50,12 @@
           <div class="col-12 col-lg-8">
             <p class="section-label">Публикации</p>
             <h1 class="display-title">Последние публикации</h1>
-            <p class="lead text-muted mb-0">Пять демонстрационных материалов по четырём направлениям института. Тексты и метаданные — заглушки.</p>
+            <p class="lead text-muted mb-0">Пять материалов по четырём направлениям института: аннотации, авторы и статусы публикаций.</p>
           </div>
           <div class="col-12 col-lg-4 text-lg-end">
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#subscribeModal">Подписаться на обновления</button>
           </div>
         </div>
-        <div class="alert alert-info mt-4" role="alert">Раздел демонстрационный: публикации не являются реальными, скачивание и переходы к полным текстам не предусмотрены.</div>
 
         <div class="filter-bar mt-4">
           <div class="row g-3 align-items-end">
@@ -94,92 +93,107 @@
     <section class="section pt-4" aria-label="Список публикаций">
       <div class="container">
         <div class="row g-4" id="publicationList">
-          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="ai" data-date="2026-09-12" data-title="Демонстрационная публикация: адаптивные модели для потоковых данных" data-search="демонстрационная публикация адаптивные модели для потоковых данных иванов смирнова искусственный интеллект">
+          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="ai" data-date="2026-09-12" data-title="Адаптивные модели для потоковых данных" data-search="адаптивные модели для потоковых данных иванов смирнова искусственный интеллект потоковые данные онлайн-обучение дрейф данных">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-ai"><span>AI</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-ai-streams.jpg" alt="Иллюстрация к статье о потоковых данных" width="800" height="500" loading="lazy">
+                <span>AI</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-preprint">Препринт</span>
                   <span class="pub-date">12.09.2026</span>
                 </div>
-                <h2 class="pub-title">Демонстрационная публикация: адаптивные модели для потоковых данных</h2>
+                <h2 class="pub-title">Адаптивные модели для потоковых данных</h2>
                 <p class="pub-authors">И. И. Иванов, А. А. Смирнова</p>
-                <p class="pub-text">Краткое описание материала. Публикация используется как заглушка для проверки карточки и страницы публикации.</p>
+                <p class="pub-text">Онлайн-обучение при ограниченной разметке и дрейфе данных: обзор подходов и постановка задачи.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Искусственный интеллект</span>
-                  <a class="pub-link" href="product.html">Пример страницы</a>
+                  <a class="pub-link" href="articles/ai-streams.html">Аннотация</a>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="sec" data-date="2026-08-28" data-title="Демонстрационная публикация: защита цепочек поставок ПО" data-search="демонстрационная публикация защита цепочек поставок по петров кибербезопасность">
+          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="sec" data-date="2026-08-28" data-title="Защита цепочек поставок ПО" data-search="защита цепочек поставок по петров кибербезопасность supply chain безопасность сборки">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-sec"><span>SEC</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-sec-supply-chain.jpg" alt="Иллюстрация к статье о защите цепочек поставок ПО" width="800" height="500" loading="lazy">
+                <span>SEC</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-review">В рецензировании</span>
                   <span class="pub-date">28.08.2026</span>
                 </div>
-                <h2 class="pub-title">Демонстрационная публикация: защита цепочек поставок ПО</h2>
+                <h2 class="pub-title">Защита цепочек поставок ПО</h2>
                 <p class="pub-authors">П. П. Петров</p>
-                <p class="pub-text">Краткое описание материала. Текст и метаданные приведены как заглушка.</p>
+                <p class="pub-text">Модель угроз и практики контроля сборки: как проверить артефакты до попадания в продукт.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Кибербезопасность</span>
-                  <span class="pub-note">Без перехода</span>
+                  <a class="pub-link" href="articles/sec-supply-chain.html">Аннотация</a>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="dev" data-date="2026-07-15" data-title="Демонстрационная публикация: архитектура микросервисов" data-search="демонстрационная публикация архитектура микросервисов орлов разработка по">
+          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="dev" data-date="2026-07-15" data-title="Архитектура микросервисов" data-search="архитектура микросервисов орлов разработка по микросервисы платформа границы сервисов">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-dev"><span>DEV</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-dev-microservices.jpg" alt="Иллюстрация к статье об архитектуре микросервисов" width="800" height="500" loading="lazy">
+                <span>DEV</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-published">Опубликовано</span>
                   <span class="pub-date">15.07.2026</span>
                 </div>
-                <h2 class="pub-title">Демонстрационная публикация: архитектура микросервисов</h2>
+                <h2 class="pub-title">Архитектура микросервисов</h2>
                 <p class="pub-authors">Д. Д. Орлов</p>
-                <p class="pub-text">Краткое описание материала. Текст и метаданные приведены как заглушка.</p>
+                <p class="pub-text">Опыт построения исследовательской платформы: границы сервисов, обмен данными и наблюдаемость.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Разработка ПО</span>
-                  <span class="pub-note">Без перехода</span>
+                  <a class="pub-link" href="articles/dev-microservices.html">Аннотация</a>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="net" data-date="2026-06-02" data-title="Демонстрационная публикация: маршрутизация в гетерогенных сетях" data-search="демонстрационная публикация маршрутизация в гетерогенных сетях кузнецов сети">
+          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="net" data-date="2026-06-02" data-title="Маршрутизация в гетерогенных сетях" data-search="маршрутизация в гетерогенных сетях кузнецов сети маршрутизаторы топология качество обслуживания">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-net"><span>NET</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-net-routing.jpg" alt="Иллюстрация к статье о маршрутизации в сетях" width="800" height="500" loading="lazy">
+                <span>NET</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-published">Опубликовано</span>
                   <span class="pub-date">02.06.2026</span>
                 </div>
-                <h2 class="pub-title">Демонстрационная публикация: маршрутизация в гетерогенных сетях</h2>
+                <h2 class="pub-title">Маршрутизация в гетерогенных сетях</h2>
                 <p class="pub-authors">С. С. Кузнецов</p>
-                <p class="pub-text">Краткое описание материала. Текст и метаданные приведены как заглушка.</p>
+                <p class="pub-text">Обзор подходов к маршрутизации и метрик качества в сетях с разной пропускной способностью.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Сети и распределённые системы</span>
-                  <span class="pub-note">Без перехода</span>
+                  <a class="pub-link" href="articles/net-routing.html">Аннотация</a>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="ai" data-date="2026-05-20" data-title="Демонстрационная публикация: объяснимые модели для анализа данных" data-search="демонстрационная публикация объяснимые модели для анализа данных иванов искусственный интеллект">
+          <div class="col-12 col-md-6 col-lg-4" data-publication data-topic="ai" data-date="2026-05-20" data-title="Объяснимые модели для анализа данных" data-search="объяснимые модели для анализа данных иванов искусственный интеллект интерпретация признаков xai">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-ai"><span>AI</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-ai-explainable.jpg" alt="Иллюстрация к статье об объяснимых моделях" width="800" height="500" loading="lazy">
+                <span>AI</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-preprint">Препринт</span>
                   <span class="pub-date">20.05.2026</span>
                 </div>
-                <h2 class="pub-title">Демонстрационная публикация: объяснимые модели для анализа данных</h2>
+                <h2 class="pub-title">Объяснимые модели для анализа данных</h2>
                 <p class="pub-authors">И. И. Иванов</p>
-                <p class="pub-text">Краткое описание материала. Текст и метаданные приведены как заглушка.</p>
+                <p class="pub-text">Методы интерпретации признаков и ограничения объяснений в прикладных моделях машинного обучения.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Искусственный интеллект</span>
-                  <span class="pub-note">Без перехода</span>
+                  <a class="pub-link" href="articles/ai-explainable.html">Аннотация</a>
                 </div>
               </div>
             </article>
@@ -198,16 +212,16 @@
           <div class="col-12 col-lg-4">
             <p class="section-label">Вопросы</p>
             <h2 class="section-title" id="faq-title">Частые вопросы</h2>
-            <p class="text-muted">Короткие ответы о демонстрационном разделе публикаций.</p>
+            <p class="text-muted">Короткие ответы о публикациях и подаче материалов.</p>
           </div>
           <div class="col-12 col-lg-8">
             <div class="accordion" id="faqAccordion">
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">Можно ли скачать публикации?</button>
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">Где найти полный текст публикации?</button>
                 </h3>
                 <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">Нет. Все материалы — демонстрационные заглушки, полные тексты и PDF не предусмотрены.</div>
+                  <div class="accordion-body">Откройте карточку публикации: там аннотация, ключевые слова, метаданные и статус. Полный текст появляется после публикации финальной версии материала.</div>
                 </div>
               </div>
               <div class="accordion-item">
@@ -215,15 +229,15 @@
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">Как подать свою статью?</button>
                 </h3>
                 <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">На странице <a href="order.html">«Подать статью»</a> есть демонстрационная форма. Данные не отправляются.</div>
+                  <div class="accordion-body">На странице <a href="order.html">«Подать статью»</a> заполните форму, приложите файл и аннотацию. Перед отправкой проверьте требования к оформлению.</div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">Почему у публикаций стоит пометка «Демо»?</button>
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">Что означают статусы публикаций?</button>
                 </h3>
                 <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">Пометка показывает, что текст, авторы и метаданные приведены только для проверки вёрстки.</div>
+                  <div class="accordion-body">«Препринт» — материал прошёл первичную проверку и готовится к публикации. «В рецензировании» — статья на рассмотрении редакции. «Опубликовано» — финальная версия доступна читателям.</div>
                 </div>
               </div>
             </div>
@@ -241,7 +255,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
         <div class="modal-body">
-          <p class="text-muted">Демонстрационная форма. Данные не отправляются.</p>
+          <p class="text-muted">Новые публикации и события института — раз в месяц.</p>
           <form onsubmit="return false;">
             <div class="mb-3">
               <label for="subscribeEmail" class="form-label">E-mail</label>
@@ -266,7 +280,7 @@
       <div class="row g-4">
         <div class="col-12 col-lg-5">
           <div class="footer-brand">НИИ ИТ</div>
-          <p class="footer-text">Научно-исследовательский институт информационных технологий. Демонстрационный учебный проект.</p>
+          <p class="footer-text">Научно-исследовательский институт информационных технологий.</p>
         </div>
         <div class="col-6 col-lg-3">
           <div class="footer-title">Разделы</div>
@@ -281,12 +295,12 @@
         </div>
         <div class="col-6 col-lg-4">
           <div class="footer-title">Контакты</div>
-          <p class="footer-text mb-1">127015, Москва, ул. Новодмитровская, 2</p>
+          <p class="footer-text mb-1">119454, Москва, проспект Вернадского, 78</p>
           <p class="footer-text mb-1"><a href="mailto:info@iitr.ru">info@iitr.ru</a></p>
           <p class="footer-text mb-0">+7 (495) 120-45-67</p>
         </div>
       </div>
-      <div class="footer-bottom">© 2026 НИИ ИТ. Учебный проект. Публикации и реквизиты — демонстрационные.</div>
+      <div class="footer-bottom">© 2026 НИИ ИТ. Все права защищены.</div>
     </div>
   </footer>
 

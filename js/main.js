@@ -1,7 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
+  initImageFallbacks();
   initPublicationFilters();
-  initDemoForm();
+  initOrderForm();
 });
+
+function initImageFallbacks() {
+  document.querySelectorAll('main img').forEach(function (img) {
+    function hide() {
+      img.hidden = true;
+    }
+
+    if (img.complete && img.naturalWidth === 0) {
+      hide();
+    }
+
+    img.addEventListener('error', hide);
+  });
+}
 
 function initPublicationFilters() {
   const list = document.getElementById('publicationList');
@@ -69,7 +84,7 @@ function initPublicationFilters() {
   applyFilters();
 }
 
-function initDemoForm() {
+function initOrderForm() {
   const form = document.querySelector('.js-validate');
   if (!form) {
     return;
