@@ -855,6 +855,19 @@ h2[id] {
   width: 16px;
 }
 
+.footer-hours {
+  align-items: flex-start;
+  color: #8fa39a;
+  display: flex;
+  font-size: 0.8rem;
+  gap: 0.55rem;
+  margin: -0.1rem 0 0.5rem;
+}
+
+.footer-hours .footer-icon {
+  color: #8fa39a;
+}
+
 .footer-title {
   color: #fff;
   font-size: 0.95rem;
