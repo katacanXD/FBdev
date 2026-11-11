@@ -59,11 +59,11 @@
 
         <div class="filter-bar mt-4">
           <div class="row g-3 align-items-end">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 col-xl-3">
               <label for="publicationSearch" class="form-label">Поиск</label>
               <input id="publicationSearch" class="form-control" type="search" placeholder="Название, автор или тема">
             </div>
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
               <label for="publicationTopic" class="form-label">Направление</label>
               <select id="publicationTopic" class="form-select">
                 <option value="all">Все направления</option>
@@ -73,7 +73,7 @@
                 <option value="net">Сети и распределённые системы</option>
               </select>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
               <label for="publicationSort" class="form-label">Сортировка</label>
               <select id="publicationSort" class="form-select">
                 <option value="newest">Сначала новые</option>
@@ -81,7 +81,13 @@
                 <option value="title">По названию</option>
               </select>
             </div>
-            <div class="col-12 col-lg-2">
+            <div class="col-12 col-sm-6 col-lg-6 col-xl-2">
+              <button id="publicationFavorites" class="btn btn-outline-primary w-100 filter-fav-btn" type="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+                Избранное <span class="filter-fav-count" data-favorites-count>0</span>
+              </button>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-6 col-xl-2">
               <button id="publicationReset" class="btn btn-outline-primary w-100" type="button">Сбросить</button>
             </div>
           </div>
@@ -101,7 +107,7 @@
               </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-status badge-preprint">Препринт</span>
+                  <span class="badge badge-status badge-prep">Подготовка к публикации</span>
                   <span class="pub-date">12.09.2026</span>
                 </div>
                 <h2 class="pub-title">Адаптивные модели для потоковых данных</h2>
@@ -122,7 +128,7 @@
               </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-status badge-review">В рецензировании</span>
+                  <span class="badge badge-status badge-review">На рецензировании</span>
                   <span class="pub-date">28.08.2026</span>
                 </div>
                 <h2 class="pub-title">Защита цепочек поставок ПО</h2>
@@ -185,7 +191,7 @@
               </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-status badge-preprint">Препринт</span>
+                  <span class="badge badge-status badge-submitted">На рассмотрении</span>
                   <span class="pub-date">20.05.2026</span>
                 </div>
                 <h2 class="pub-title">Объяснимые модели для анализа данных</h2>
@@ -200,8 +206,8 @@
           </div>
         </div>
         <div id="publicationEmpty" class="empty-state" hidden>
-          <h2 class="h4">Ничего не найдено</h2>
-          <p class="mb-0">Измените запрос или сбросьте фильтры.</p>
+          <h2 class="h4" id="publicationEmptyTitle">Ничего не найдено</h2>
+          <p class="mb-0" id="publicationEmptyText">Измените запрос или сбросьте фильтры.</p>
         </div>
       </div>
     </section>
@@ -237,7 +243,7 @@
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">Что означают статусы публикаций?</button>
                 </h3>
                 <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">«Препринт» — материал прошёл первичную проверку и готовится к публикации. «В рецензировании» — статья на рассмотрении редакции. «Опубликовано» — финальная версия доступна читателям.</div>
+                  <div class="accordion-body">«На рассмотрении» — редакция проверяет комплектность материалов. «Ожидает рецензирования» — материал принят и ждёт назначения рецензентов. «На рецензировании» — статья передана рецензентам. «Подготовка к публикации» — материал принят, готовятся финальная версия и DOI. «Опубликовано» — статья доступна читателям.</div>
                 </div>
               </div>
             </div>
