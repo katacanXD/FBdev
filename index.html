@@ -80,7 +80,7 @@
             </div>
             <div class="col-6 col-lg-4">
               <div class="stat-number">5</div>
-              <div class="stat-label">демонстрационных публикаций</div>
+              <div class="stat-label">материалов в каталоге</div>
             </div>
           </div>
         </div>
@@ -97,19 +97,42 @@
         </div>
         <div class="row g-4">
           <div class="col-12 col-md-4">
-            <div class="direction-card">
+            <div class="principle-card">
+              <span class="principle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M12 6.5C10.5 5.4 8.6 4.8 6.5 4.8H4v13h2.5c2.1 0 4 .6 5.5 1.7 1.5-1.1 3.4-1.7 5.5-1.7H20v-13h-2.5c-2.1 0-4 .6-5.5 1.7Z"></path>
+                  <path d="M12 6.5v13"></path>
+                </svg>
+              </span>
               <h3>Открытый доступ</h3>
               <p>Результаты исследований публикуются открыто. Читатель видит авторов, направление и статус материала.</p>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="direction-card">
+            <div class="principle-card">
+              <span class="principle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M7 3h7l4 4v14H7z"></path>
+                  <path d="M14 3v4h4"></path>
+                  <path d="m9.5 13 2 2 3.5-3.5"></path>
+                </svg>
+              </span>
               <h3>Рецензирование</h3>
-              <p>Материалы проходят проверку редакцией. В демо-версии процесс описан, но не автоматизирован.</p>
+              <p>Материалы проходят проверку редакцией: от комплектности заявки до научной экспертизы.</p>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="direction-card">
+            <div class="principle-card">
+              <span class="principle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <circle cx="6" cy="6" r="2.5"></circle>
+                  <circle cx="18" cy="6" r="2.5"></circle>
+                  <circle cx="12" cy="18" r="2.5"></circle>
+                  <path d="M8.5 6h7"></path>
+                  <path d="m7.2 8.2 3.6 7.6"></path>
+                  <path d="m16.8 8.2-3.6 7.6"></path>
+                </svg>
+              </span>
               <h3>Междисциплинарность</h3>
               <p>ИИ, безопасность, разработка ПО и сети рассматриваются как связанные части одной исследовательской программы.</p>
             </div>
@@ -130,6 +153,9 @@
         <div class="row g-4">
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="direction-card">
+              <div class="direction-media">
+                <img src="images/direction-ai.jpg" alt="Лаборатория искусственного интеллекта" width="800" height="600" loading="lazy">
+              </div>
               <div class="direction-code">AI</div>
               <h3>Искусственный интеллект</h3>
               <p>Модели, данные и объяснимые алгоритмы.</p>
@@ -137,6 +163,9 @@
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="direction-card">
+              <div class="direction-media">
+                <img src="images/direction-sec.jpg" alt="Центр кибербезопасности" width="800" height="600" loading="lazy">
+              </div>
               <div class="direction-code">SEC</div>
               <h3>Кибербезопасность</h3>
               <p>Защита систем, кода и цепочек поставок.</p>
@@ -144,6 +173,9 @@
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="direction-card">
+              <div class="direction-media">
+                <img src="images/direction-dev.jpg" alt="Разработка программного обеспечения" width="800" height="600" loading="lazy">
+              </div>
               <div class="direction-code">DEV</div>
               <h3>Разработка ПО</h3>
               <p>Архитектура, тестирование и инженерия.</p>
@@ -151,6 +183,9 @@
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="direction-card">
+              <div class="direction-media">
+                <img src="images/direction-net.jpg" alt="Серверная и сетевое оборудование" width="800" height="600" loading="lazy">
+              </div>
               <div class="direction-code">NET</div>
               <h3>Сети и системы</h3>
               <p>Распределённые сервисы и маршрутизация.</p>
@@ -172,54 +207,63 @@
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-4">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-ai"><span>AI</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-ai-streams.jpg" alt="Иллюстрация к статье о потоковых данных" width="800" height="500" loading="lazy">
+                <span>AI</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-prep">Подготовка к публикации</span>
                   <span class="pub-date">12.09.2026</span>
                 </div>
-                <h3 class="pub-title">Демонстрационная публикация: адаптивные модели для потоковых данных</h3>
+                <h3 class="pub-title">Адаптивные модели для потоковых данных</h3>
                 <p class="pub-authors">И. И. Иванов, А. А. Смирнова</p>
-                <p class="pub-text">Краткое описание материала. Публикация используется как заглушка для проверки карточки и страницы публикации.</p>
+                <p class="pub-text">Онлайн-обучение при ограниченной разметке и дрейфе данных: обзор подходов и постановка задачи.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Искусственный интеллект</span>
-                  <a class="pub-link" href="product.html">Пример страницы</a>
+                  <a class="pub-link" href="articles/ai-streams.html">Аннотация</a>
                 </div>
               </div>
             </article>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-sec"><span>SEC</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-sec-supply-chain.jpg" alt="Иллюстрация к статье о защите цепочек поставок ПО" width="800" height="500" loading="lazy">
+                <span>SEC</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-review">На рецензировании</span>
                   <span class="pub-date">28.08.2026</span>
                 </div>
-                <h3 class="pub-title">Демонстрационная публикация: защита цепочек поставок ПО</h3>
+                <h3 class="pub-title">Защита цепочек поставок ПО</h3>
                 <p class="pub-authors">П. П. Петров</p>
-                <p class="pub-text">Краткое описание материала. Текст и метаданные приведены как заглушка.</p>
+                <p class="pub-text">Модель угроз и практики контроля сборки: как проверить артефакты до попадания в продукт.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Кибербезопасность</span>
-                  <span class="pub-note">Без перехода</span>
+                  <a class="pub-link" href="articles/sec-supply-chain.html">Аннотация</a>
                 </div>
               </div>
             </article>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
             <article class="pub-card">
-              <div class="pub-cover pub-cover-dev"><span>DEV</span></div>
+              <div class="pub-cover">
+                <img src="images/publication-dev-microservices.jpg" alt="Иллюстрация к статье об архитектуре микросервисов" width="800" height="500" loading="lazy">
+                <span>DEV</span>
+              </div>
               <div class="pub-body">
                 <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <span class="badge badge-demo">Демо</span>
+                  <span class="badge badge-status badge-published">Опубликовано</span>
                   <span class="pub-date">15.07.2026</span>
                 </div>
-                <h3 class="pub-title">Демонстрационная публикация: архитектура микросервисов</h3>
+                <h3 class="pub-title">Архитектура микросервисов</h3>
                 <p class="pub-authors">Д. Д. Орлов</p>
-                <p class="pub-text">Краткое описание материала. Текст и метаданные приведены как заглушка.</p>
+                <p class="pub-text">Опыт построения исследовательской платформы: границы сервисов, обмен данными и наблюдаемость.</p>
                 <div class="pub-footer">
                   <span class="pub-topic">Разработка ПО</span>
-                  <span class="pub-note">Без перехода</span>
+                  <a class="pub-link" href="articles/dev-microservices.html">Аннотация</a>
                 </div>
               </div>
             </article>
@@ -233,7 +277,7 @@
         <div class="section-head">
           <div>
             <p class="section-label">События</p>
-            <h2 class="section-title" id="events-title">Ближайшие мероприятия</h2>
+            <h2 class="section-title" id="events-title">Мероприятия института</h2>
           </div>
           <a class="text-link" href="about.html#events">Все события</a>
         </div>
@@ -241,6 +285,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="event-slide">
+                <img class="event-bg" src="images/event-conference.jpg" alt="" width="1920" height="1080" loading="lazy">
                 <p class="event-date">12–14 ноября 2026</p>
                 <h3>IITR Conf 2026: доверие к искусственному интеллекту</h3>
                 <p>Ежегодная конференция института. Москва, конференц-зал НИИ ИТ.</p>
@@ -248,6 +293,7 @@
             </div>
             <div class="carousel-item">
               <div class="event-slide">
+                <img class="event-bg" src="images/event-seminar.jpg" alt="" width="1200" height="675" loading="lazy">
                 <p class="event-date">28 октября 2026</p>
                 <h3>Семинар: безопасность больших языковых моделей</h3>
                 <p>Открытый онлайн-семинар лаборатории кибербезопасности.</p>
@@ -255,6 +301,7 @@
             </div>
             <div class="carousel-item">
               <div class="event-slide">
+                <img class="event-bg" src="images/event-open-day.jpg" alt="" width="1200" height="675" loading="lazy">
                 <p class="event-date">5 декабря 2026</p>
                 <h3>День открытых исследований</h3>
                 <p>Экскурсии по лабораториям и встречи с исследователями.</p>
@@ -284,7 +331,7 @@
           <div>
             <p class="section-label">Публикация</p>
             <h2>Поделитесь результатами исследования</h2>
-            <p>Заполните демонстрационную форму: она показывает, как может выглядеть подача статьи в институт.</p>
+            <p>Заполните форму подачи: редакция проверит комплектность материалов и структуру статьи.</p>
           </div>
           <a class="btn btn-primary btn-lg" href="order.html">Подать статью</a>
         </div>
@@ -297,30 +344,47 @@
       <div class="row g-4">
         <div class="col-12 col-lg-5">
           <div class="footer-brand">НИИ ИТ</div>
-          <p class="footer-text">Научно-исследовательский институт информационных технологий. Демонстрационный учебный проект.</p>
+          <p class="footer-text">Научно-исследовательский институт информационных технологий.</p>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="footer-title">Разделы</div>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Публикации</a></li>
             <li><a href="requirements.html">Требования</a></li>
-            <li><a href="about.html">Институт</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
             <li><a href="order.html">Подать статью</a></li>
           </ul>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
           <div class="footer-title">Контакты</div>
-          <p class="footer-text mb-1">127015, Москва, ул. Новодмитровская, 2</p>
-          <p class="footer-text mb-1"><a href="mailto:info@iitr.ru">info@iitr.ru</a></p>
-          <p class="footer-text mb-0">+7 (495) 120-45-67</p>
+          <p class="footer-text footer-contact mb-1">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"></circle></svg>
+            <span>119454, Москва, проспект Вернадского, 78</span>
+          </p>
+          <p class="footer-text footer-contact mb-1">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+          </p>
+          <p class="footer-hours">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span>Пн–Пт, 09:00–18:00 МСК</span>
+          </p>
+          <p class="footer-text footer-contact mb-0">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"></rect><path d="m4 7 8 5.6L20 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <a href="mailto:info@iitr.ru">info@iitr.ru</a>
+          </p>
         </div>
       </div>
-      <div class="footer-bottom">© 2026 НИИ ИТ. Учебный проект. Публикации и реквизиты — демонстрационные.</div>
+      <div class="footer-bottom">© 2026 НИИ ИТ. Все права защищены.</div>
     </div>
   </footer>
 
+  <button class="to-top" type="button" data-to-top aria-label="Вернуться наверх">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Архитектура микросервисов. Опыт построения исследовательской платформы">
+  <title>Архитектура микросервисов — НИИ ИТ</title>
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+          <img src="../images/logo.svg" alt="" width="36" height="36">
+          <span>
+            <span class="brand-name d-block">НИИ ИТ</span>
+            <span class="brand-sub d-none d-sm-block">институт информационных технологий</span>
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="../catalog.html">Публикации</a></li>
+            <li class="nav-item"><a class="nav-link" href="../requirements.html">Требования</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html">Институт</a></li>
+            <li class="nav-item"><a class="nav-link" href="../contacts.html">Контакты</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm" href="../order.html">Подать статью</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container pt-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="../catalog.html">Публикации</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Архитектура микросервисов</li>
+        </ol>
+      </nav>
+    </div>
+
+    <article class="section pt-3"
+      data-article
+      data-article-id="dev-microservices"
+      data-article-title="Архитектура микросервисов"
+      data-article-year="2026"
+      data-article-date="15 июля 2026"
+      data-authors-gost="Орлов Д. Д."
+      data-authors-apa="Орлов, Д. Д."
+      data-status-stage="5"
+      data-status-label="Опубликовано"
+      data-status-date="15 июля 2026"
+      data-status-note="Финальная версия статьи опубликована в журнале института.">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-12 col-lg-8">
+            <span class="badge badge-status badge-published mb-3">Опубликовано</span>
+            <h1 class="display-title mb-3">Архитектура микросервисов</h1>
+            <p class="fs-5 text-muted mb-1">Опыт построения исследовательской платформы</p>
+            <p class="pub-authors fs-5 mb-1">Д. Д. Орлов</p>
+            <p class="text-muted mb-4">15 июля 2026 · Разработка ПО</p>
+
+            <div data-status-panel></div>
+            <div data-article-tools></div>
+
+            <figure class="article-cover">
+              <img src="../images/publication-dev-microservices.jpg" alt="Иллюстрация к статье «Архитектура микросервисов»" width="800" height="500">
+            </figure>
+
+            <div class="alert alert-info" role="alert">Полный текст статьи доступен в печатной версии журнала. Электронная версия — по запросу редакции.</div>
+
+            <ul class="nav nav-tabs mt-4" id="publicationTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="abstract-tab" data-bs-toggle="tab" data-bs-target="#abstract-panel" type="button" role="tab" aria-controls="abstract-panel" aria-selected="true">Аннотация</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="meta-tab" data-bs-toggle="tab" data-bs-target="#meta-panel" type="button" role="tab" aria-controls="meta-panel" aria-selected="false">Метаданные</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="publicationTabsContent">
+              <div class="tab-pane fade show active" id="abstract-panel" role="tabpanel" aria-labelledby="abstract-tab" tabindex="0">
+                <p>Переход от монолита к микросервисам меняет не только структуру кода, но и процессы разработки. В статье описан опыт построения исследовательской платформы с независимыми сервисами и общим контуром наблюдаемости.</p>
+                <p>Обсуждаются границы сервисов, контракты обмена данными и цена распределённой сложности. Отдельный раздел посвящён тестированию и сопровождению распределённой системы.</p>
+                <h2 class="h5 mt-3">Ключевые слова</h2>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge badge-topic">микросервисы</span>
+                  <span class="badge badge-topic">архитектура</span>
+                  <span class="badge badge-topic">наблюдаемость</span>
+                  <span class="badge badge-topic">контракты</span>
+                  <span class="badge badge-topic">тестирование</span>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="meta-panel" role="tabpanel" aria-labelledby="meta-tab" tabindex="0">
+                <div class="table-responsive">
+                  <table class="table table-bordered align-middle mb-0">
+                    <tbody>
+                      <tr><th scope="row">Направление</th><td>Разработка ПО</td></tr>
+                      <tr><th scope="row">Дата</th><td>15 июля 2026</td></tr>
+                      <tr><th scope="row">Авторы</th><td>Д. Д. Орлов</td></tr>
+                      <tr><th scope="row">Статус</th><td>Опубликовано</td></tr>
+                      <tr><th scope="row">Тип</th><td>Научная статья</td></tr>
+                      <tr><th scope="row">Язык</th><td>Русский</td></tr>
+                      <tr><th scope="row">DOI</th><td>Не присвоен</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a class="btn btn-primary" href="../catalog.html">Назад к публикациям</a>
+              <a class="btn btn-outline-primary" href="../order.html">Подать статью</a>
+            </div>
+          </div>
+
+          <aside class="col-12 col-lg-4">
+            <div class="card side-card mb-4">
+              <div class="card-header">О статье</div>
+              <div class="card-body">
+                <p class="text-muted">Научная статья института. Аннотация и метаданные доступны на этой странице.</p>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2"><strong>Направление:</strong> Разработка ПО</li>
+                  <li class="mb-2"><strong>Статус:</strong> Опубликовано</li>
+                  <li class="mb-2"><strong>Язык:</strong> русский</li>
+                  <li class="mb-0"><strong>DOI:</strong> не присвоен</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card side-card">
+              <div class="card-header">Другие публикации</div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-3">
+                  <li class="mb-2"><a href="ai-streams.html">Адаптивные модели для потоковых данных</a></li>
+                  <li class="mb-2"><a href="sec-supply-chain.html">Защита цепочек поставок ПО</a></li>
+                  <li class="mb-2"><a href="net-routing.html">Маршрутизация в гетерогенных сетях</a></li>
+                </ul>
+                <a class="btn btn-outline-primary w-100" href="../catalog.html">Открыть каталог</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <div class="footer-brand">НИИ ИТ</div>
+          <p class="footer-text">Научно-исследовательский институт информационных технологий.</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="footer-title">Разделы</div>
+          <ul class="list-unstyled footer-links">
+            <li><a href="../catalog.html">Публикации</a></li>
+            <li><a href="../requirements.html">Требования</a></li>
+            <li><a href="../order.html">Подать статью</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="footer-title">Контакты</div>
+          <p class="footer-text footer-contact mb-1">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"></circle></svg>
+            <span>119454, Москва, проспект Вернадского, 78</span>
+          </p>
+          <p class="footer-text footer-contact mb-1">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+          </p>
+          <p class="footer-hours">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span>Пн–Пт, 09:00–18:00 МСК</span>
+          </p>
+          <p class="footer-text footer-contact mb-0">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"></rect><path d="m4 7 8 5.6L20 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <a href="mailto:info@iitr.ru">info@iitr.ru</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 НИИ ИТ. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" data-to-top aria-label="Вернуться наверх">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

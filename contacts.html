@@ -51,7 +51,7 @@
       <div class="container">
         <p class="section-label">Контакты</p>
         <h1 class="display-title">Связаться с институтом</h1>
-        <p class="lead text-muted">Адрес, реквизиты и демонстрационная форма вопроса. Все данные приведены для примера.</p>
+        <p class="lead text-muted">Адрес, реквизиты и форма для связи с редакцией института.</p>
 
         <div class="row g-5 mt-2">
           <div class="col-12 col-lg-5">
@@ -59,17 +59,18 @@
               <div class="card-header">Приёмная</div>
               <div class="card-body">
                 <ul class="list-unstyled mb-0">
-                  <li class="mb-3"><strong>Адрес</strong><br>127015, Москва, ул. Новодмитровская, 2, корп. 1</li>
+                  <li class="mb-3"><strong>Адрес</strong><br>119454, Москва, проспект Вернадского, 78</li>
+                  <li class="mb-3"><strong>Метро</strong><br>Юго-Западная, 10 минут пешком</li>
                   <li class="mb-3"><strong>Телефон</strong><br><a href="tel:+74951204567">+7 (495) 120-45-67</a></li>
                   <li class="mb-3"><strong>Почта</strong><br><a href="mailto:info@iitr.ru">info@iitr.ru</a></li>
-                  <li><strong>Часы работы</strong><br>Пн–Пт, 10:00–18:00</li>
+                  <li><strong>Часы работы</strong><br>Пн–Пт, 09:00–18:00 МСК</li>
                 </ul>
               </div>
             </div>
 
             <h2 class="h5">Реквизиты</h2>
             <div class="table-responsive">
-              <table class="table table-bordered align-middle">
+              <table class="table requisites-table align-middle mb-0">
                 <tbody>
                   <tr><th scope="row">Полное название</th><td>НИИ информационных технологий</td></tr>
                   <tr><th scope="row">ИНН</th><td>7701234567</td></tr>
@@ -78,14 +79,13 @@
                 </tbody>
               </table>
             </div>
-            <p class="text-muted small">Реквизиты демонстрационные и не относятся к реальной организации.</p>
           </div>
 
           <div class="col-12 col-lg-7">
             <div class="card">
               <div class="card-header">Задать вопрос</div>
-              <div class="card-body p-4">
-                <div class="alert alert-info" role="alert">Демо-форма: данные не отправляются.</div>
+              <div class="card-body p-5 ">
+                <p class="text-muted">Ответим на вопросы о публикациях, рецензировании и сотрудничестве в течение двух рабочих дней.</p>
                 <form action="#" onsubmit="return false;">
                   <div class="row g-3">
                     <div class="col-12 col-md-6">
@@ -123,13 +123,13 @@
               </div>
             </div>
           </div>
+          <div class="col-12">
+            <div class="alert alert-info" role="alert">
+              <strong>Информация:</strong> Приёмная института находится по адресу: проспект Вернадского, 78.
+            </div>
+          </div>
         </div>
-
-        <div class="map-box mt-5">
-          <span class="map-pin"></span>
-          <span class="map-label">м. Дмитровская · 8 минут пешком</span>
-        </div>
-        <p class="text-muted small mt-2 mb-0">Схема условная: карта не подключена.</p>
+        <div id="map" class="map-embed" role="region" aria-label="Карта проезда к институту"></div>
       </div>
     </section>
   </main>
@@ -139,30 +139,48 @@
       <div class="row g-4">
         <div class="col-12 col-lg-5">
           <div class="footer-brand">НИИ ИТ</div>
-          <p class="footer-text">Научно-исследовательский институт информационных технологий. Демонстрационный учебный проект.</p>
+          <p class="footer-text">Научно-исследовательский институт информационных технологий.</p>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="footer-title">Разделы</div>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Публикации</a></li>
             <li><a href="requirements.html">Требования</a></li>
-            <li><a href="about.html">Институт</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
             <li><a href="order.html">Подать статью</a></li>
           </ul>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
           <div class="footer-title">Контакты</div>
-          <p class="footer-text mb-1">127015, Москва, ул. Новодмитровская, 2</p>
-          <p class="footer-text mb-1"><a href="mailto:info@iitr.ru">info@iitr.ru</a></p>
-          <p class="footer-text mb-0">+7 (495) 120-45-67</p>
+          <p class="footer-text footer-contact mb-1">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"></circle></svg>
+            <span>119454, Москва, проспект Вернадского, 78</span>
+          </p>
+          <p class="footer-text footer-contact mb-1">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+          </p>
+          <p class="footer-hours">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <span>Пн–Пт, 09:00–18:00 МСК</span>
+          </p>
+          <p class="footer-text footer-contact mb-0">
+            <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.7"></rect><path d="m4 7 8 5.6L20 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <a href="mailto:info@iitr.ru">info@iitr.ru</a>
+          </p>
         </div>
       </div>
-      <div class="footer-bottom">© 2026 НИИ ИТ. Учебный проект. Публикации и реквизиты — демонстрационные.</div>
+      <div class="footer-bottom">© 2026 НИИ ИТ. Все права защищены.</div>
     </div>
   </footer>
 
+  <button class="to-top" type="button" data-to-top aria-label="Вернуться наверх">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

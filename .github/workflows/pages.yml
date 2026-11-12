@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - kr2-final
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          rsync -a --exclude='.git' --exclude='.env' --exclude='js/map-config.js' ./ _site/
+
+      - name: Inject map key
+        env:
+          MAP_API_KEY: ${{ secrets.MAP_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          import pathlib
+
+          key = os.environ.get("MAP_API_KEY", "").strip()
+          pathlib.Path("_site/js/map-config.js").write_text(
+              "window.MAP_API_KEY = %r;\n" % key,
+              encoding="utf-8",
+          )
+          print("map key set" if key else "map key missing, static map will be used")
+          PY
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
